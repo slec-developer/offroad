@@ -21,9 +21,17 @@
     z-index: 1;
     color: white; /* Adjust text color */
     text-align: center;
-    padding: 2vh;
+    padding: 0;
     height: auto;
-    margin-top: 70%;
+    margin-top: 5%;
+}
+.autobot-bg-row {
+    display: block;
+}
+
+.autobot-bg {
+    width:30vh;
+    height: auto;
 }
 
 
@@ -34,6 +42,33 @@
     background-size: auto 100%;
     background-attachment: fixed;
 }
+
+.service-box-col {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Hide overflow */
+    height: 20vh;
+}
+.service-box-col img {
+    max-width: 100%; /* Ensure image scales within the container */
+    height: auto;
+}
+
+.services-overlay {
+    position: absolute; /* Make it overlay the image */
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Ensure it's above the image */
+    display: flex; 
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
 .featured_build_section {
     background: url('./../images/content/featured-build-bg.jpg') no-repeat center;
     background-position: center;
@@ -46,6 +81,50 @@
     background-size: auto 100%;
     background-attachment: fixed;
 }
+.blog-outer-div {
+    height: auto;
+    max-height: 170vh;
+    overflow:hidden;
+}
+.blog-first-div {
+    position: relative;
+}
+
+.blog-overlay {
+    position: relative;
+    z-index: 1;
+    color: white; /* Adjust text color */
+    text-align: center;
+    padding: 0;
+    height: auto;
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+
+.blog-right-box {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Hide overflow */
+}
+.first-blog-img {
+    position: absolute;
+}
+.blog-right-box img {
+    max-width: 100%; /* Ensure image scales within the container */
+    height: auto;
+}
+
+.blog-overlay-2 {
+    position: absolute; /* Make it overlay the image */
+    top: 5%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Ensure it's above the image */
+}
+
 .shop_here_section {
     background: url('./../images/content/default-bg.png') no-repeat center;
     background-position: center;
@@ -78,6 +157,24 @@
     .overlay {
         padding: 0;
         margin-top: 23%;
+    }
+    .autobot-bg-row {
+        display: none;
+    }
+    .service-box-col {
+        height: 30vh;
+    }
+    .blog-outer-div {
+        max-height: 125vh;
+    }
+    .blog-right-box img {
+        margin-top: -5%;
+    }
+    .blog-overlay {
+        margin-top: 50%;
+    }
+    .blog-overlay-2 {
+        margin-top: 10%;
     }
 }
 
