@@ -11,6 +11,7 @@ import AutobotBG from './../../../assets/images/ico/autobot-bg.png'
 import FirstBlog from './../../../assets/images/content/march-madness.jpg'
 import SecondBlog from './../../../assets/images/content/blog-1.jpg'
 import ThirdBlog from './../../../assets/images/content/blog-2.jpg'
+import PhilMap from './../../../assets/images/content/ph-map.png'
 
 import ServiceOne from './../../../assets/images/content/services-1.jpg'
 import ServiceTwo from './../../../assets/images/content/services-2.jpg'
@@ -21,6 +22,8 @@ import ServiceSix from './../../../assets/images/content/services-6.jpg'
 import ServiceSeven from './../../../assets/images/content/services-7.jpg'
 import ServiceEight from './../../../assets/images/content/services-8.jpg'
 
+import FirstProduct from './../../../assets/images/shop/shop-1.jpg'
+import SecondProduct from './../../../assets/images/shop/shop-2.jpg'
 
 const servicesData = [
   {
@@ -93,11 +96,11 @@ function index() {
         
       </div>
       <SectionTitle tittle="SERVICES"/>
-      <div className="container-fluid services_section" >
+      <div className="container-fluid services_section p-0" >
         <div className='service-box-row row p-0 m-0'>
 
             {servicesData.map((service, index) => (
-              <div key={index} className='service-box-col col-lg-6 col-md-6 col-sm-12 m-0 p-0 bg-primary'>
+              <div key={index} className='service-box-col col-lg-6 col-md-6 col-sm-12 m-0 p-0'>
                 <img src={service.imageSrc} alt={`Service ${index + 1}`} />
                   <div className='services-overlay'>
                     <BlackRouteBtn
@@ -168,7 +171,145 @@ function index() {
       </div>
       <SectionTitle tittle="SHOP HERE"/>
       <div className="container-fluid shop_here_section" >
-        
+
+         <div className="container">
+            <div className="row">
+                <div className='col-md-12'>
+                  <h2>MODIFICATION</h2>
+                  <div id="myCarousel" className="carousel slide" data-ride="carousel" data-interval="0">
+                        <ol className="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>  
+
+                        <div className="carousel-inner">
+                        
+                        <div className="item active">
+                            <div className="row">
+                                <div className="col-sm-3">
+                                    <div className="thumb-wrapper">
+                                        <div className="img-box">
+                                            <img src={FirstProduct} className="img-responsive" alt=""/>
+                                        </div>
+                                        <div className="thumb-content">
+                                            <h4>Apple iPad</h4>
+                                            
+                                            
+                                            
+                                        </div>						
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="thumb-wrapper">
+                                        <div className="img-box">
+                                            <img src={SecondProduct} className="img-responsive" alt="" />
+                                        </div>
+                                        <div className="thumb-content">
+                                            <h4>Sony Headphone</h4>
+                                            
+                                            
+                                            
+                                        </div>						
+                                    </div>
+                                </div>
+                                
+                                <div className="col-sm-3">
+                                    <div className="thumb-wrapper">
+                                        <div className="img-box">
+                                            <img src={FirstProduct} className="img-responsive" alt=""/>
+                                        </div>
+                                        <div className="thumb-content">
+                                            <h4>Apple iPad</h4>
+                                            
+                                            
+                                            
+                                        </div>						
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="thumb-wrapper">
+                                        <div className="img-box">
+                                            <img src={SecondProduct} className="img-responsive" alt="" />
+                                        </div>
+                                        <div className="thumb-content">
+                                            <h4>Sony Headphone</h4>
+                                            
+                                            
+                                            
+                                        </div>						
+                                    </div>
+                                </div>
+
+                                <div className="col-sm-3">
+                                    <div className="thumb-wrapper">
+                                        <div className="img-box">
+                                            <img src={FirstProduct} className="img-responsive" alt=""/>
+                                        </div>
+                                        <div className="thumb-content">
+                                            <h4>Apple iPad</h4>
+                                            
+                                            
+                                            
+                                        </div>						
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="thumb-wrapper">
+                                        <div className="img-box">
+                                            <img src={SecondProduct} className="img-responsive" alt="" />
+                                        </div>
+                                        <div className="thumb-content">
+                                            <h4>Sony Headphone</h4>
+                                            
+                                            
+                                            
+                                        </div>						
+                                    </div>
+                                </div>
+
+                                <div className="col-sm-3">
+                                    <div className="thumb-wrapper">
+                                        <div className="img-box">
+                                            <img src={FirstProduct} className="img-responsive" alt=""/>
+                                        </div>
+                                        <div className="thumb-content">
+                                            <h4>Apple iPad</h4>
+                                            
+                                            
+                                        </div>						
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="thumb-wrapper">
+                                        <div className="img-box">
+                                            <img src={SecondProduct} className="img-responsive" alt="" />
+                                        </div>
+                                        <div className="thumb-content">
+                                            <h4>Sony Headphone</h4>
+                                            
+                                            
+                                            
+                                        </div>						
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
+
+
+                        <a className="carousel-control left" href="#myCarousel" data-slide="prev">
+                            <i className="fa fa-angle-left"></i>
+                        </a>
+                        <a className="carousel-control right" href="#myCarousel" data-slide="next">
+                            <i className="fa fa-angle-right"></i>
+                        </a>
+                  </div>
+                </div>
+            </div>
+         </div>
+
       </div>
       <SectionTitle tittle="SERVICE CENTER"/>
       <div className="container-fluid service_center_section" >
@@ -194,8 +335,11 @@ function index() {
       </div>
       <SectionTitle tittle="POWERED BY"/>
       <div className="container-fluid powered_by_section" >
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div className='row m-0'>
+            <div className='col-12 p-5 d-flex justify-content-center align-items-center'>
+              <img src={PhilMap} className='w-25 h-auto img-fluid' alt="" />
+            </div>
+        </div>
       </div>
     </>
   )

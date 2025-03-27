@@ -24,10 +24,26 @@ html, body {
   color: #000;
 }
 
+.red_btn {
+  text-decoration: none;
+  background-color: red;
+  color: #fff;
+  padding: 1.3vh 3vh 1.3vh 3vh;
+  border-radius: 10vh;
+}
+
+.red_btn:hover {
+  background-color: #D9D9D9;
+  color: red;
+}
+
 .transparent_black {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.sp-wide {
+  padding: 1vh 10vh 1vh 10vh;
+}
  /* Margins Mobile */
  .margin-t-sm-10 {
   margin-top: 10%;

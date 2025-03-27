@@ -1,0 +1,31 @@
+.aboutus_home_section {
+    background: url('./../images/content/about-us-bg.jpg') no-repeat center;
+    background-position: center;
+    background-size: auto 100%;
+    background-attachment: fixed;
+}
+
+.aboutus_home_section {
+    margin: 0;
+    padding:20px 0 50px 0;
+    width:100%;
+    height:auto;
+    min-height: 80vh;
+}
+
+.aboutus_content_section {
+    background-color: black;
+    background-position: center;
+    background-size: auto 100%;
+    background-attachment: fixed;
+    padding: 1vh 2vh 2vh 2vh;
+}
+
+@media only screen and (min-width:1000px) {
+    .aboutus_home_section {
+        background-size: cover;
+    }
+    .aboutus_content_section {
+        padding: 10vh 20vh 20vh 20vh;
+    }
+}
