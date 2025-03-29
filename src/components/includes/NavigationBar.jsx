@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect  } from 'react'
 import "./../../assets/css/navigation_bar.css"; // 
-import { Link } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import AutobotIco from './../../assets/images/ico/autobot-ico.png';
 import AutobotLogo from './../../assets/images/ico/autobot-logo.png';
@@ -8,19 +8,21 @@ import AutobotLogo from './../../assets/images/ico/autobot-logo.png';
 
 function NavigationBar() {
   const navRef = useRef()
+  const location = useLocation(); // Get the current route
+  const [scrolling, setScrolling] = useState(false);
 
   const showNavBar = () => {
     navRef.current.classList.toggle("responsive_nav")
   }
 
-  const [scrolling, setScrolling] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true); // Add background when scrolled
+      if (location.pathname === "/") {
+        setScrolling(window.scrollY > 50); // Add background when scrolled
       } else {
-        setScrolling(false); // Remove background at top
+        setScrolling(true); // Remove background at top
       }
     };
 
@@ -28,7 +30,7 @@ function NavigationBar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [location.pathname]);
 
   return (
     <header className={`p-0 m-0 ${scrolling ? "scrolled" : ""}`}>

@@ -6,6 +6,7 @@ import LeftSmallDescription from './../../global/LeftSmallDescription'
 import LeftImageDescription from './../../global/LeftImageDescription'
 import RightImageDescription from './../../global/RightImageDescription'
 import BlackRouteBtn from './../../global/BlackRouteBtn'
+import FeaturedBuildCarousel from './../../global/FeaturedBuildCarousel'
 
 import AutobotBG from './../../../assets/images/ico/autobot-bg.png'
 import FirstBlog from './../../../assets/images/content/march-madness.jpg'
@@ -24,6 +25,7 @@ import ServiceEight from './../../../assets/images/content/services-8.jpg'
 
 import FirstProduct from './../../../assets/images/shop/shop-1.jpg'
 import SecondProduct from './../../../assets/images/shop/shop-2.jpg'
+import FeaturedBuild from '../../global/FeaturedBuildCarousel'
 
 const servicesData = [
   {
@@ -86,7 +88,7 @@ function index() {
             </div>
           </div>
           <LeftSmallDescription 
-              DescBoxClass="transparent_black" 
+              DescBoxClass="" 
               BoxTittle="Quality built since ‘07"
               BoxDescription="Where innovation meets adventure. Autobot Autoworks is the ultimate destination for off-road modifications, turning SUVs and 4x4s into unstoppable beasts. From full-build transformations to top-tier custom paint and detailing, we make sure your rig is always adventure-ready—on and off the road."
               RouterLink="/about-us"
@@ -115,14 +117,17 @@ function index() {
       </div>
       <SectionTitle tittle="FEATURED BUILD"/>
       <div className="container-fluid featured_build_section" >
-        <LeftSmallDescription 
-            rowClassName="lsd_box_row"
-            DescBoxClass="transparent_black" 
-            BoxTittle="Project Secret Weapon"
-            BoxDescription="Autobot Autoworks takes the spotlight with Project Secret Weapon, a fully customized Ford Ranger that dominated the show. From its flawless paint to its aggressive off-road build, this rig is pure innovation and performance."
-            RouterLink="/about-us"
-            BtnTittle="Read more"
-        />
+        <FeaturedBuildCarousel />
+        <div className="fb-overlay">
+          <LeftSmallDescription 
+              rowClassName="fb_lsd_box_row"
+              DescBoxClass="" 
+              BoxTittle="Project Secret Weapon"
+              BoxDescription="Autobot Autoworks takes the spotlight with Project Secret Weapon, a fully customized Ford Ranger that dominated the show. From its flawless paint to its aggressive off-road build, this rig is pure innovation and performance."
+              RouterLink="/about-us"
+              BtnTittle="Read more"
+          />
+        </div>
       </div>
       <SectionTitle tittle="BLOG"/>
       <div className="container-fluid blog_section p-0" >

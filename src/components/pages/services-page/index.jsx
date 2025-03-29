@@ -1,6 +1,7 @@
 import React from 'react'
 import './../../../assets/css/services-page.css'
 import RedRouteBtn from './../../global/RedRouteBtn'
+import SwiperCarousel from "./../../global/SwiperCarousel"
 
 import FirstCont from './../../../assets/images/content/services-cont-1.jpg'
 
@@ -181,8 +182,8 @@ function services() {
                         <strong className='text-white'>OFF-ROAD VEHICLE CUSTOMIZATION</strong>
                     </span>
                 </div>
-                <div className='services-carousel-div col-12 m-0 p-0 d-flex justify-content-center align-items-center'>
-                    <img src={FirstCont} className="w-100 h-auto" alt="Randy Ronald M. Lao" />
+                <div className='services-carousel-div col-12 m-0'>
+                    <SwiperCarousel />
                 </div>
                 <div className='col-12 m-0 p-3 d-flex justify-content-center align-items-center text-center'>
                     <p className='services-p mt-5'>We modify vehicles for off-road adventures, equipping them with essential upgrades such as lift kits, skid plates, winches, and lighting solutions to enhance durability and capability.</p>

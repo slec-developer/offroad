@@ -36,13 +36,13 @@
 }
 
 .srvcs-span-div {
-    padding-bottom: 5vh;
+    padding-bottom: 3vh;
 }
 
-.services-carousel-div {
+/* .services-carousel-div {
     overflow: hidden;
     height: auto;
-}
+} */
 
 .services-p {
     font-size: 24px;
@@ -62,13 +62,13 @@
         background-size: cover;
     }
     .services_home_section {
-        padding: 10vh 20vh 20vh 20vh;
+        padding: 5vh 20vh 20vh 20vh;
     }
     .services_content_section {
         padding: 10vh 20vh 20vh 20vh;
     }
     .services-carousel-div {
-        max-height: 75vh;
+        /* max-height: 75vh; */
     }
     .partners-logo {
         height: 5vh;

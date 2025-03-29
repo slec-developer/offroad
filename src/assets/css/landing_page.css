@@ -70,11 +70,24 @@
 }
 
 .featured_build_section {
-    background: url('./../images/content/featured-build-bg.jpg') no-repeat center;
+    position: relative;
+    overflow: hidden;
     background-position: center;
-    background-size: auto 100%;
+    background-size: 500vh 100%;
     background-attachment: fixed;
 }
+
+.fb-overlay {
+    position: relative;
+    z-index: 1;
+    color: red; /* Adjust text color */
+    text-align: center;
+    padding: 0;
+    height: auto;
+    margin-top: 0%;
+    margin-bottom: 30%;
+}
+
 .blog_section {
     background: url('./../images/content/default-bg.png') no-repeat center;
     background-position: center;
@@ -152,8 +165,8 @@
     background-attachment: fixed;
 }
 
-@media only screen and (min-width:1000px) {
-    .home_section, .services_section, .featured_build_section, .blog_section, .shop_here_section, .service_center_section, .merch_section, .powered_by_section {
+@media only screen and (min-width:1300px) {
+    .home_section, .services_section, .blog_section, .shop_here_section, .service_center_section, .merch_section, .powered_by_section {
         background-size: cover;
     }
     .overlay {

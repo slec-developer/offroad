@@ -1,0 +1,54 @@
+.carousel-container {
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+}
+
+.slide {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Full height of the slide */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Prevent overflow */
+    object-fit: contain; /* Ensures full image is visible */
+}
+
+/* Change arrow colors */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #eff1f1 !important; /* Change to any color */
+  font-size: 24px; /* Adjust size */
+}
+
+/* Optional: Add a background color */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 50%;
+  display: none;
+}
+
+/* Change bullet color */
+.swiper-pagination-bullet {
+    background: #D9D9D9 !important; /* Change to any color */
+    opacity: 0.5;
+  }
+  
+  /* Active bullet */
+  .swiper-pagination-bullet-active {
+    background: #eff1f1 !important; /* Change active bullet color */
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+  }
+  
+  @media only screen and (min-width:1300px) {
+    .carousel-container {
+        height: 500px; /* Adjust height as needed */
+    }
+  }

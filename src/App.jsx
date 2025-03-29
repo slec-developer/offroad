@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/pages/Layout'
+import ScrollToTop  from './assets/js/ScrollToTop'
 
 // Main Page Routes
 import Home from "./components/pages/landing-page/index";
@@ -19,6 +20,8 @@ import FeaturedProject from './components/pages/featured-project-page/index'
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
+      
       <Routes>
         // Main Page
         <Route path="/" element={<Layout/>}>
