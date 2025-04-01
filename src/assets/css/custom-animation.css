@@ -24,3 +24,18 @@
     }
 }
 
+.zoom-in {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoom-in:hover {
+    transform: scale(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.image-hover:hover {
+    filter: sepia(100%) hue-rotate(0deg) saturate(300%);
+    transition: filter 0.3s ease-in-out;
+    opacity: 0.5; 
+}
+  
+

@@ -1,0 +1,543 @@
+[
+    {
+      "category": "ford",
+      "title": "Ford",
+      "link": "/featured-unit/",
+      "imgSrc": "build-10.jpg",
+      "units" : [
+        {
+            "id": "ford-1",
+            "title": "FORD BRONCO - PROJECT YANKEE",
+            "link": "/project-unit/",
+            "first_description": "<strong>Project Yankee: The Ford Bronco Built to Dominate</strong><br/><br/> <p>Some vehicles are built to perform, others are built to impress—but Project Yankee does both. This custom Ford Bronco isn’t just another off-road build; it’s a statement of power, precision, and passion. Modified to perfection by Autobot Offroad, this rig sets a new benchmark for what a true off-road beast should be. And behind the wheel? None other than Lyn Macanas, a woman redefining what it means to be a car enthusiast in a world often dominated by men.</p><br/><strong>Lyn Macanas: The Lady of Iron</strong><br/><br/><p>Lyn Macanas is more than just an Autobot Offroad ambassador—she’s a force to be reckoned with. A powerhouse in the construction industry, she has built a reputation for strength, resilience, and vision. But beyond her business empire, Lyn has another passion that knows no limits: cars. Her collection is a mix of raw power and refined engineering, ranging from American muscle to high-performance off-road machines.</p>",
+            "second_description": "<strong>The Build: Performance Meets Perfection</strong><br /><br /><p>To create a Bronco worthy of its name, the following premium upgrades were installed: <br /><ul><li>ARB Front, Rear, & Rock Sliders (Body Colored) – Built for durability and a sleek, custom finish. Old Man Emu Suspension – Elevating ride comfort and off-road capability.</li><li>Old Man Emu Suspension – Elevating ride comfort and off-road capability</li><li>Fuel Sinister 20x10 Wheels Wrapped in BFGoodrich Tires – Maximum traction for any terrain.</li><li>ARB Under Vehicle Protection (UVP) – Extra shielding for extreme trails.</li><li>Custom Interior with Logo Embroidery – Personalization at its finest.</li><li>Upgraded Grille & Carbon Fiber Steering Wheel – A bold, aggressive look.</li><li>Alpharex Headlights & Tail Lights – Bright, modern, and built to last</li><li>Mitsuba Horns – Loud, clear, and commanding presence.</li><li>Nacho Lights & Novsight LED System – Unrivaled night visibility.</li><li>ARB Roof Rack – Extra storage for adventure gear.</li><li>ARB Differential Breather – Protecting drivetrain components in extreme conditions.</li><li>Gibson Exhaust & Performance Intake – Enhanced power and efficiency.</li></ul><br />Project Yankee isn’t just a vehicle; it’s proof of what happens when vision meets craftsmanship. With Lyn Macanas behind the wheel and Autobot Offroad behind the build, this Bronco isn’t just made to ride—it’s made to lead. Whether on the road, off the beaten path, or taking center stage at an auto show, Project Yankee is a true masterpiece of off-road engineering.</p>",
+            "imgSrc": "build-10.jpg",
+            "images": [
+                {
+                    "imgSrc": "build-10.jpg"
+                },
+                {
+                    "imgSrc": "build-11.jpg"
+                },
+                {
+                    "imgSrc": "build-12.jpg"
+                }
+            ]
+        },
+        {
+            "id": "ford-2",
+            "title": "FORD BRONCO - PROJECT YANKEE",
+            "link": "/project-unit/",
+            "first_description": "",
+            "second_description": "",
+            "imgSrc": "build-10.jpg",
+            "images": [
+                {
+                    "imgSrc": "build-10.jpg"
+                },
+                {
+                    "imgSrc": "build-5.jpg"
+                },
+                {
+                    "imgSrc": "build-6.jpg"
+                }
+            ]
+        },
+        {
+            "id": "ford-3",
+            "title": "PROJECT YANKEE",
+            "link": "/project-unit/",
+            "first_description": "",
+            "second_description": "",
+            "imgSrc": "build-10.jpg",
+            "images": [
+                {
+                    "imgSrc": "build-10.jpg"
+                },
+                {
+                    "imgSrc": "build-5.jpg"
+                },
+                {
+                    "imgSrc": "build-6.jpg"
+                }
+            ]
+        }
+      ]
+    },
+    {
+      "category": "toyota",
+      "title": "Toyota",
+      "link": "/featured-unit/",
+      "imgSrc": "DSC00130.jpg",
+      "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "DSC00130.jpg",
+                "images": [
+                    {
+                        "imgSrc": "DSC00130.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC00126.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC00141.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC00144.jpg"
+                    }
+                ]
+            },
+            {
+                "id": "toyota-2",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "DSC03745.jpg",
+                "images": [
+                    {
+                        "imgSrc": "DSC03745.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC03742.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC03748.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC03750.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC03754.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC03757.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC03759.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC03764.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC03768.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC03772.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC03776.jpg"
+                    }
+                ]
+            },
+            {
+                "id": "toyota-3",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "DSC00305.jpg",
+                "images": [
+                    {
+                        "imgSrc": "DSC00305.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC00302.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC00308.jpg"
+                    },
+                    {
+                        "imgSrc": "DSC00322.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+      "category": "jeep",
+      "title": "Jeep",
+      "link": "/featured-unit/",
+      "imgSrc": "build-4.jpg",
+      "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+      "category": "isuzu",
+      "title": "Isuzu",
+      "link": "/featured-unit/",
+      "imgSrc": "build-3.jpg",
+      "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "hummer",
+        "title": "Hummer",
+        "link": "/featured-unit/",
+        "imgSrc": "build-6.jpg",
+        "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "nissan",
+        "title": "Nissan",
+        "link": "/featured-unit/",
+        "imgSrc": "build-7.jpg",
+        "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "land-rover",
+        "title": "Land Rover",
+        "link": "/featured-unit/",
+        "imgSrc": "build-8.jpg",
+        "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "mitsubishi",
+        "title": "Mitsubishi",
+        "link": "/featured-unit/",
+        "imgSrc": "build-9.jpg",
+        "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "ford",
+        "title": "Ford",
+        "link": "/featured-unit/",
+        "imgSrc": "build-10.jpg",
+        "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+      },
+      {
+        "category": "toyota",
+        "title": "Toyota",
+        "link": "/featured-unit/",
+        "imgSrc": "build-5.jpg",
+        "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+      },
+      {
+        "category": "jeep",
+        "title": "Jeep",
+        "link": "/featured-unit/",
+        "imgSrc": "build-4.jpg",
+        "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+      },
+      {
+        "category": "isuzu",
+        "title": "Isuzu",
+        "link": "/featured-unit/",
+        "imgSrc": "build-3.jpg",
+        "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+      },
+      {
+          "category": "hummer",
+          "title": "Hummer",
+          "link": "/featured-unit/",
+          "imgSrc": "build-6.jpg",
+          "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+      },
+      {
+          "category": "nissan",
+          "title": "Nissan",
+          "link": "/featured-unit/",
+          "imgSrc": "build-7.jpg",
+          "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+      },
+      {
+          "category": "land-rover",
+          "title": "Land Rover",
+          "link": "/featured-unit/",
+          "imgSrc": "build-8.jpg",
+          "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+      },
+      {
+          "category": "mitsubishi",
+          "title": "Mitsubishi",
+          "link": "/featured-unit/",
+          "imgSrc": "build-9.jpg",
+          "units" : [
+            {
+                "id": "toyota-1",
+                "title": "Toyota Fortuner 2nd Gen",
+                "link": "/project-unit/",
+                "first_description": "",
+                "second_description": "",
+                "imgSrc": "build-10.jpg",
+                "images": [
+                    {
+                        "imgSrc": "build-10.jpg"
+                    },
+                    {
+                        "imgSrc": "build-5.jpg"
+                    },
+                    {
+                        "imgSrc": "build-6.jpg"
+                    }
+                ]
+            }
+        ]
+      }
+  ]
+
+  
+  

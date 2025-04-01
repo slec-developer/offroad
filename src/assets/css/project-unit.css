@@ -1,0 +1,18 @@
+.project_unit_section {
+    margin: 0;
+    padding: 5%;
+    width:100%;
+    height:auto;
+    min-height: 100vh;
+    
+}
+
+@media only screen and (min-width:700px) {
+
+}
+@media only screen and (min-width:1300px) {
+    .project_unit_section {
+        min-height: 115vh;
+    }
+
+}

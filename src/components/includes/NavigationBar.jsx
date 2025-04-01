@@ -38,15 +38,15 @@ function NavigationBar() {
         <div className="container d-flex flex-wrap justify-content-center align-items-center">
           <Link to="/" onClick={showNavBar}>Home</Link>
           <Link to="/about-us" onClick={showNavBar}>About Us</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/contact">Collection</Link>
+          <Link to="/services" onClick={showNavBar}>Services</Link>
+          <Link to="/collection" onClick={showNavBar}>Collection</Link>
           <Link to="/" className="autobot-router-link">
             <img src={scrolling ? AutobotLogo : AutobotIco} className="autobot-ico" alt="Autobot Offroad PH" />
           </Link>
-          <Link to="/">Media</Link>
-          <Link to="/about-us">Shop</Link>
-          <Link to="/services">Contact Us</Link>
-          <Link to="/contact">Register</Link>
+          <Link to="/" onClick={showNavBar}>Media</Link>
+          <Link to="/about-us" onClick={showNavBar}>Shop</Link>
+          <Link to="/services" onClick={showNavBar}>Contact Us</Link>
+          <Link to="/contact" onClick={showNavBar}>Register</Link>
           <button className="nav-btn nav-close-btn" onClick={showNavBar}>
             <FaTimes />
           </button>
