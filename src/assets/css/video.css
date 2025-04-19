@@ -1,0 +1,44 @@
+.video-section {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 5%;
+    width:100%;
+    height:auto;
+    min-height: 100vh;
+    padding-top: 17vh;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the background */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.video-list-section {
+    margin: 0;
+    padding: 10%;
+    width:100%;
+    height:auto;
+    min-height: 100vh;
+    padding-top: 17vh;
+}
+.video-gallery a {
+    text-decoration: none;
+}
+
+.video-gallery p {
+    color: white;
+}
+.video-gallery img {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .video-gallery img:hover {
+    transform: scale(1.05);
+  }

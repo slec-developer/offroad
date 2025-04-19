@@ -10,8 +10,13 @@ header {
   transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
+header nav {
+  margin: 0;
+  padding: 0;
+}
+
 nav a {
-  margin: 0 2rem;
+  margin: 0 1.8rem;
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -38,6 +43,11 @@ header .nav-btn {
   font-size: 1.8rem;
 }
 
+.nav_div {
+  padding-top: 0;
+  margin-top: 1vh;
+}
+
 .open-btn-div {
   display: none;
 }
@@ -60,6 +70,68 @@ header .nav-btn {
 .scrolled nav a:hover {
   color: red;
 }
+
+
+/* Dropdown Styles */
+.nav-item {
+  position: relative;
+  min-width: 50px;
+  
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 50px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: black !important;
+  transition: background 0.3s;
+  margin-left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown when open */
+.nav-item:hover .dropdown-menu,
+.nav-item .dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ensure mobile compatibility */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -87,7 +159,7 @@ header .nav-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
     background-color: black;
     transition: 0.5s;
     transform: translateY(-100vh);
@@ -123,6 +195,11 @@ header .nav-btn {
 
   .autobot-router-link {
     display: none;
+  }
+
+  .nav_div {
+    padding-top: 2vh;
+    margin-top: 5vh;
   }
   
 }

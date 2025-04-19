@@ -7,6 +7,17 @@
     
 }
 
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to break into new rows */
+    gap: 10px; /* Adds spacing between images */
+}
+
+.lg-img, .lg-img-1 {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
 @media only screen and (min-width:700px) {
 
 }
@@ -14,5 +25,15 @@
     .project_unit_section {
         min-height: 115vh;
     }
+    .lg-img-1 {
+        width: 50%;
+        height: auto;
+    }
+    .lg-img {
+        width: 15%;
+        height: auto;
+        margin-top: 0; /* Ensures no top margin */
+    }
+   
 
 }

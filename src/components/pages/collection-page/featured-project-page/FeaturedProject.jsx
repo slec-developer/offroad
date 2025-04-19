@@ -40,7 +40,7 @@ const nextPage = () => {
                         {currentRecords.map((category, index) => (
                         <div key={index} className="category-div">
                             <Link to={`${category.link}${category.category}`} className='card bg-transparent zoom-in rounded-0 m-0 p-0'>
-                                <img src={`/assets/images/featured-build/${category.imgSrc}`} className="card-img-top rounded-0" alt={`Cover ${index + 1}`} />
+                                <img src={`/assets/images/featured-project/${category.imgSrc}`} className="card-img-top rounded-0" alt={`Cover ${index + 1}`} />
                                 <div className="card-body text-center bg-transparent">
                                 <h5 className="card-title text-white">{category.title}</h5>
                                 </div>

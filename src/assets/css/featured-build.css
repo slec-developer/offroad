@@ -1,0 +1,26 @@
+.fb_home_section {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:auto;
+    min-height: 100vh;
+}
+.build-div {
+    margin: 2%;
+    width: 100%;
+}
+@media only screen and (min-width:720px) {
+    .build-div {
+        width: 40%;
+        height: 30vh;
+    }
+}
+@media only screen and (min-width:1300px) {
+    .fb_home_section {
+        min-height: 115vh;
+    }
+    .build-div {
+        width: 20%;
+        height: 43vh;
+    }
+}

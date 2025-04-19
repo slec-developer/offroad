@@ -46,7 +46,7 @@ const prevPage = () => {
                             <Link key={unit.id || unitIndex} to={`${unit.link}${projectCategory.category}/${unit.id}`} className='unit-rows col-12'>
                                 <div className='row m-0 p-0'>
                                     <div className='col-lg-3 col-md-3 col-sm-12 p-0 m-0'>
-                                        <img src={`/assets/images/featured-build/${unit.imgSrc}`} className="card-img-top rounded-0" alt={`Unit ${unitIndex + 1}`} />
+                                        <img src={`/assets/images/featured-project/${unit.imgSrc}`} className="card-img-top rounded-0" alt={`Unit ${unitIndex + 1}`} />
                                     </div>
                                     <div className='unit-info col-lg-9 col-md-9 col-sm-12'>
                                         <h4 className='mb-3'>{unit.title}</h4>

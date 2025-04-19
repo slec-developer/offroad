@@ -1,0 +1,279 @@
+[
+    {
+        "id": "ford-3",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "green",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "toyota-1",
+        "category": "toyota",
+        "title": "Toyota Fortuner 2nd Gen",
+        "released": "02/15/2025",
+        "color": "black",
+        "images": [
+            { "imgSrc": "DSC00130.jpg" },
+            { "imgSrc": "DSC00126.jpg" },
+            { "imgSrc": "DSC00141.jpg" },
+            { "imgSrc": "DSC00144.jpg" },
+            { "imgSrc": "DSC00149.jpg" },
+            { "imgSrc": "DSC00150.jpg" },
+            { "imgSrc": "DSC00151.jpg" },
+            { "imgSrc": "DSC00154.jpg" },
+            { "imgSrc": "DSC00231.jpg" }
+        ]
+    },
+    {
+        "id": "suzuki-1",
+        "category": "suzuki",
+        "title": "Suzuki Jimny 4th Gen JB64-JB74",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "DSC03540.jpg" },
+            { "imgSrc": "DSC03552.jpg" },
+            { "imgSrc": "DSC03555.jpg" },
+            { "imgSrc": "DSC03558.jpg" },
+            { "imgSrc": "DSC03560.jpg" },
+            { "imgSrc": "DSC03563.jpg" },
+            { "imgSrc": "DSC03565.jpg" },
+            { "imgSrc": "DSC03569.jpg" },
+            { "imgSrc": "DSC03573.jpg" },
+            { "imgSrc": "DSC03576.jpg" },
+            { "imgSrc": "DSC03581.jpg" },
+            { "imgSrc": "DSC03587.jpg" },
+            { "imgSrc": "DSC03592.jpg" },
+            { "imgSrc": "DSC03598.jpg" },
+            { "imgSrc": "DSC03548.jpg" },
+            { "imgSrc": "DSC03550.jpg" }
+        ]
+    },
+    {
+        "id": "nissan-1",
+        "category": "nissan",
+        "title": "Nissan NP300 3rd Gen EL-VL",
+        "released": "02/15/2025",
+        "color": "orange",
+        "images": [
+            { "imgSrc": "DSC01613.jpg" },
+            { "imgSrc": "DSC01608.jpg" },
+            { "imgSrc": "DSC01617.jpg" },
+            { "imgSrc": "DSC01621.jpg" },
+            { "imgSrc": "DSC01626.jpg" },
+            { "imgSrc": "DSC01622.jpg" }
+        ]
+    },
+    {
+        "id": "suzuki-2",
+        "category": "suzuki",
+        "title": "Suzuki JImny 4th Gen JB64-JB74",
+        "released": "02/15/2025",
+        "color": "green",
+        "images": [
+            { "imgSrc": "DSC00578.jpg" },
+            { "imgSrc": "DSC00575.jpg" },
+            { "imgSrc": "DSC00588.jpg" },
+            { "imgSrc": "DSC00594.jpg" },
+            { "imgSrc": "DSC00595.jpg" },
+            { "imgSrc": "DSC00604.jpg" },
+            { "imgSrc": "DSC00609.jpg" },
+            { "imgSrc": "DSC00624.jpg" },
+            { "imgSrc": "DSC00636.jpg" },
+            { "imgSrc": "DSC00639.jpg" },
+            { "imgSrc": "DSC00648.jpg" },
+            { "imgSrc": "DSC00667.jpg" },
+            { "imgSrc": "DSC00680.jpg" },
+            { "imgSrc": "DSC00687.jpg" },
+            { "imgSrc": "DSC00693.jpg" },
+            { "imgSrc": "DSC00702.jpg" },
+            { "imgSrc": "DSC00708.jpg" },
+            { "imgSrc": "DSC00714.jpg" }
+        ]
+    },
+    {
+        "id": "ford-8",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-9",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-10",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-11",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-12",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-13",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-14",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-15",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-16",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-17",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-18",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-19",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-20",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-21",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    },
+    {
+        "id": "ford-22",
+        "category": "ford",
+        "title": "Ford Yankee",
+        "released": "02/15/2025",
+        "color": "white",
+        "images": [
+            { "imgSrc": "build-10.jpg" },
+            { "imgSrc": "build-11.jpg" },
+            { "imgSrc": "build-12.jpg" }
+        ]
+    }
+]
