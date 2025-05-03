@@ -38,7 +38,7 @@
     margin-left: -2vh;  /* Space between right icon and text */
 }
 
-.home_section, .services_section, .blog_section, .shop_here_section, .service_center_section, .powered_by_section, .contact, .footer_section {
+.home_section, .services_section, .blog_section, .shop_here_section, .service_center_section, .powered_by_section, .contact, .footer_section, .service-footer-section {
     margin: 0;
     padding:20px 0 50px 0;
     width:100%;
@@ -234,6 +234,17 @@
     height:auto;
     min-height: 20vh;
 }
+.service-footer-section {
+    background-color: #0E3440;
+    ;
+    background-position: center;
+    background-size: auto 100%;
+    background-attachment: fixed;
+    padding: 5vh;
+    padding-top: 10vh;
+    height:auto;
+    min-height: 20vh;
+}
 
 .secondary-navbar {
     display: flex;
@@ -283,7 +294,13 @@
     color: black !important;
     border-color: white;
   }
+.orange-color {
+    color:#FF9500;
+}
 
+.orange-color:hover {
+    color:#d08111;
+}
 
 
 @media only screen and (min-width:720px) {
@@ -307,7 +324,7 @@
     
 }
 @media only screen and (min-width:1300px) {
-    .section_tittle_div, .footer_section  {
+    .section_tittle_div, .footer_section, .service-footer-section  {
         background-size: cover;
     }
     .section_tittle_div {
@@ -352,6 +369,11 @@
         text-overflow: unset;
     }
     .footer_section {
+        padding: 5vh;
+        height:auto;
+        min-height: 25vh;
+    }
+    .service-footer-section {
         padding: 5vh;
         height:auto;
         min-height: 25vh;

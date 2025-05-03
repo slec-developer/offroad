@@ -1,0 +1,205 @@
+header {
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 2rem;
+  position: fixed;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+header nav {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  margin: 0 1.8rem;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #888a8c; 
+}
+
+nav a:hover {
+  color: red;
+}
+
+nav .autobot-ico {
+  width: 3rem;
+  height: auto;
+}
+
+header .nav-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: aliceblue;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+.nav_div {
+  padding-top: 0;
+  margin-top: 1vh;
+}
+
+.open-btn-div {
+  display: none;
+}
+
+.autobot-router-link {
+  display: block;
+  margin: 0 30px 0 30px ;
+}
+.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.scrolled nav a {
+  color: white;
+  animation: fadeIn 0.3s ease-in-out;
+  text-shadow: none;
+}
+
+.scrolled nav a:hover {
+  color: red;
+}
+
+
+/* Dropdown Styles */
+.nav-item {
+  position: relative;
+  min-width: 50px;
+  
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 50px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: black !important;
+  transition: background 0.3s;
+  margin-left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown when open */
+.nav-item:hover .dropdown-menu,
+.nav-item .dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ensure mobile compatibility */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: black;
+    transition: 0.5s;
+    transform: translateY(-100vh);
+    opacity: 0.90;
+  }
+
+  header .responsive_nav {
+    transform: none;
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav a {
+    color: aliceblue;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    text-shadow: none; 
+  }
+
+  .open-btn-div {
+    display: block;
+  }
+
+  .open-btn-div .nav-open-btn {
+    float: right;
+  }
+
+  .autobot-router-link {
+    display: none;
+  }
+
+  .nav_div {
+    padding-top: 2vh;
+    margin-top: 5vh;
+  }
+  
+}

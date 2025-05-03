@@ -1,24 +1,26 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/pages/Layout'
+import ServiceLayout from './components/pages/ServiceLayout'
 import ScrollToTop  from './assets/js/ScrollToTop'
 
-import NotFound from './components/pages/error-page/NotFound'
+import NotFound from './components/pages/main/error-page/NotFound'
 // Main Page Routes
-import Home from "./components/pages/landing-page/index";
-import About from './components/pages/about-us/index'
-import Services from './components/pages/services-page/index'
-import Collection from './components/pages/collection-page/featured-project-page/index'
-import FeaturedProject from './components/pages/collection-page/featured-project-page/FeaturedProject'
-import FeaturedUnit from './components/pages/collection-page/featured-project-page/FeaturedUnit'
-import ProjectUnit from './components/pages/collection-page/featured-project-page/ProjectUnit'
-import FeaturedBuild from './components/pages/collection-page/featured-build-page/index'
-import ProjectBuild from './components/pages/collection-page/featured-build-page/ProjectBuild'
-import Blog from './components/pages/media-page/blog-page/index'
-import Video from './components/pages/media-page/video-page/index'
+import Home from "./components/pages/main/landing-page/index";
+import About from './components/pages/main/about-us/index'
+import Services from './components/pages/main/services-page/index'
+import Collection from './components/pages/main/collection-page/featured-project-page/index'
+import FeaturedProject from './components/pages/main/collection-page/featured-project-page/FeaturedProject'
+import FeaturedUnit from './components/pages/main/collection-page/featured-project-page/FeaturedUnit'
+import ProjectUnit from './components/pages/main/collection-page/featured-project-page/ProjectUnit'
+import FeaturedBuild from './components/pages/main/collection-page/featured-build-page/index'
+import ProjectBuild from './components/pages/main/collection-page/featured-build-page/ProjectBuild'
+import Blog from './components/pages/main/media-page/blog-page/index'
+import Video from './components/pages/main/media-page/video-page/index'
 // End of Main Page Routes
 
 // Services Page Routes
+import ServiceHome from "./components/pages/service-center/landing-page/Index";
 // End of Services Page Routes
 
 // Merch Page Routes
@@ -46,8 +48,11 @@ function App() {
           <Route path="/blog/:categories" element={<Blog/>}></Route>
           <Route path="/video" element={<Video/>}></Route>
         </Route>
-        // Services Page
 
+        // Service Center Page
+        <Route path="/service-center" element={<ServiceLayout/>}>
+          <Route index element={<ServiceHome />} />
+        </Route>
         // Merch Page
         
         
