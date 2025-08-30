@@ -37,6 +37,19 @@ html, body {
   color: red;
 }
 
+.orange_btn {
+  text-decoration: none;
+  background-color: #FF9500;
+  color: #fff;
+  padding: 1.3vh 3vh 1.3vh 3vh;
+  border-radius: 10vh;
+}
+
+.orange_btn:hover {
+  background-color: #D9D9D9;
+  color: #FF9500;
+}
+
 .transparent_black {
   background-color: rgba(0, 0, 0, 0.6);
 }

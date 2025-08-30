@@ -1,5 +1,7 @@
+@import './theme.css';
+
 .service-center-header {
-    background: #0E3440;
+    background: var(--army_green);
     display: flex;
     align-items: center;
     height: 80px;
@@ -15,7 +17,7 @@
     padding: 0;
   }
   
-  nav a {
+  .service-center-header nav a {
     margin: 0 1.8rem;
     color: white;
     text-decoration: none;
@@ -23,16 +25,16 @@
     text-shadow: 1px 1px 2px #888a8c; 
   }
   
-  nav a:hover {
-    color: #FF9500;
+  .service-center-header nav a:hover {
+    color: var(--orange);
   }
 
-  nav .autobot-ico {
+  .service-center-header nav .autobot-ico {
     width: 3rem;
     height: auto;
   }
   
-  nav .autobot-service-ico {
+  .service-center-header nav .autobot-service-ico {
     width: 10rem;
     height: auto;
   }
@@ -42,55 +44,83 @@
     background: transparent;
     border: none;
     outline: none;
-    color: aliceblue;
+    color: var(--aliceblue);
     visibility: hidden;
     opacity: 0;
     font-size: 1.8rem;
+    z-index: 1001;
   }
   
-  .nav_div {
+  .service-center-header .nav_div {
     padding-top: 0;
     margin-top: 1vh;
   }
   
-  .open-btn-div {
+  .service-center-header .open-btn-div {
     display: none;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    z-index: 1002;
   }
   
-  .autobot-router-link {
+  .service-center-header .autobot-router-link {
     display: block;
     margin: 0 30px 0 30px ;
   }
-  .scrolled {
+  
+  .service-center-header .back-link {
+    display: block;
+  }
+  
+  /* Hide back text in desktop view */
+  .service-center-header .back-link .back-text {
+    display: none;
+  }
+  
+  .service-center-header.scrolled {
     background: rgba(0, 0, 0, 0.85);
     padding: 10px 20px;
     animation: fadeIn 0.3s ease-in-out;
   }
-  .scrolled nav a {
+  .service-center-header.scrolled nav a {
     color: white;
     animation: fadeIn 0.3s ease-in-out;
     text-shadow: none;
   }
   
-  .scrolled nav a:hover {
+  .service-center-header.scrolled nav a:hover {
     color: red;
   }
   
   
   /* Dropdown Styles */
-  .nav-item {
+  .service-center-header .nav-item {
     position: relative;
     min-width: 50px;
-    
   }
   
-  .dropdown-toggle {
+  .service-center-header .dropdown-toggle {
     cursor: pointer;
     padding: 10px;
     position: relative;
   }
   
-  .dropdown-menu {
+  /* Nav link styles */
+  .service-center-header .nav-link {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #888a8c;
+    transition: color 0.3s ease;
+  }
+  
+  .service-center-header .nav-link:hover {
+    color: var(--orange);
+  }
+  
+  .service-center-header .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -107,7 +137,7 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
   
-  .dropdown-menu a {
+  .service-center-header .dropdown-menu a {
     padding: 10px;
     text-decoration: none;
     color: black !important;
@@ -117,20 +147,20 @@
     text-align: center;
   }
   
-  .dropdown-menu a:hover {
+  .service-center-header .dropdown-menu a:hover {
     background-color: #f0f0f0;
   }
   
   /* Show dropdown when open */
-  .nav-item:hover .dropdown-menu,
-  .nav-item .dropdown-menu.open {
+  .service-center-header .nav-item:hover .dropdown-menu,
+  .service-center-header .nav-item .dropdown-menu.open {
     opacity: 1;
     visibility: visible;
   }
   
   /* Ensure mobile compatibility */
   @media (max-width: 768px) {
-    .dropdown-menu {
+    .service-center-header .dropdown-menu {
       position: static;
       width: 100%;
       box-shadow: none;
@@ -149,62 +179,257 @@
   }
   
   @media only screen and (max-width: 1300px) {
-  
     .service-center-header .nav-btn {
       visibility: visible;
       opacity: 1;
     }
+    
     .service-center-header nav {
       position: fixed;
       top: 0;
       left: 0;
-      height: 100%;
+      height: 100vh;
       width: 100%;
       flex-direction: column;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
-      background-color: #0E3440;
-      transition: 0.5s;
+      gap: 3rem;
+      background-color: rgba(14, 52, 64, 0.95);
+      transition: all 0.5s ease;
       transform: translateY(-100vh);
-      opacity: 0.90;
+      opacity: 0;
+      z-index: 1000;
     }
   
     .service-center-header .responsive_nav {
-      transform: none;
+      transform: translateY(0);
+      opacity: 1;
     }
   
-    nav .nav-close-btn {
-      position: absolute;
+    .service-center-header nav .nav-close-btn {
+      position: fixed;
       top: 2rem;
       right: 2rem;
+      color: white;
+      font-size: 2rem;
+      z-index: 1003;
     }
   
-    nav a {
-      color: aliceblue;
+    .service-center-header nav a {
+      color: white;
       font-size: 1.5rem;
       width: 100%;
       text-align: center;
-      padding: 0.5rem;
-      text-shadow: none; 
-    }
-  
-    .open-btn-div {
-      display: block;
-    }
-  
-    .open-btn-div .nav-open-btn {
-      float: right;
-    }
-  
-    .autobot-router-link {
-      display: none;
-    }
-  
-    .nav_div {
-      padding-top: 0;
-      margin-top: 0;
+      padding: 1.5rem;
+      text-shadow: none;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      margin: 0;
     }
     
+    .service-center-header nav a:hover {
+      color: var(--orange);
+      background-color: rgba(255, 255, 255, 0.1);
+      border-bottom-color: var(--orange);
+    }
+  
+    .service-center-header .open-btn-div {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      transform: translateY(-50%);
+    }
+  
+    .service-center-header .open-btn-div .nav-open-btn {
+      background: rgba(14, 52, 64, 0.9);
+      border-radius: 5px;
+      padding: 0.5rem;
+      color: white;
+    }
+  
+    .service-center-header .autobot-router-link {
+      display: none;
+    }
+    
+    /* Show back link in responsive mode */
+    .service-center-header .back-link {
+      display: block !important;
+      width: 100%;
+      text-align: center;
+      padding: 1.5rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    
+    .service-center-header .back-link i {
+      display: none !important;
+    }
+    
+    .service-center-header .back-link .back-text {
+      display: block !important;
+      color: white;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin: 0;
+    }
+    
+    .service-center-header .back-link:hover {
+      color: var(--orange);
+      background-color: rgba(255, 255, 255, 0.1);
+      border-bottom-color: var(--orange);
+    }
+    
+    .service-center-header .back-link:hover .back-text {
+      color: var(--orange);
+    }
+  
+    .service-center-header .nav_div {
+      padding-top: 0;
+      margin-top: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+    }
+    
+    /* Ensure all navigation items are centered */
+    .service-center-header .nav_div > * {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Fix any container padding issues */
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    /* Mobile dropdown adjustments */
+    .service-center-header .dropdown-menu {
+      position: static !important;
+      width: 100% !important;
+      box-shadow: none !important;
+      background-color: rgba(255, 255, 255, 0.05) !important;
+      border: none !important;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .service-center-header .dropdown-menu a {
+      color: white !important;
+      padding: 0.75rem !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 0.25rem 0;
+      font-size: 1.1rem;
+    }
+    
+    .service-center-header .dropdown-menu a:hover {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    /* Ensure consistent spacing for all nav items */
+    .service-center-header .nav-item {
+      margin: 0;
+      width: 100%;
+    }
+    
+    .service-center-header .nav-item .dropdown-toggle {
+      margin: 0;
+      width: 100%;
+    }
+  }
+  
+  /* Additional responsive adjustments */
+  @media only screen and (max-width: 768px) {
+    .service-center-header {
+      padding: 0 1rem;
+    }
+    
+    .service-center-header nav {
+      gap: 2.5rem;
+    }
+    
+    .service-center-header nav a {
+      font-size: 1.3rem;
+      padding: 1.25rem;
+    }
+    
+    .service-center-header .back-link {
+      padding: 1.25rem;
+    }
+    
+    .service-center-header .back-link .back-text {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    
+    .service-center-header .dropdown-menu a {
+      padding: 0.75rem !important;
+      font-size: 1rem;
+    }
+    
+    .service-center-header .open-btn-div {
+      right: 1rem;
+    }
+    
+    .service-center-header nav .nav-close-btn {
+      right: 1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .service-center-header {
+      padding: 0 0.5rem;
+    }
+    
+    .service-center-header nav {
+      gap: 2rem;
+    }
+    
+    .service-center-header nav a {
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+    
+    .service-center-header .back-link {
+      padding: 1rem;
+    }
+    
+    .service-center-header .back-link .back-text {
+      font-size: 1rem;
+      margin: 0;
+    }
+    
+    .service-center-header .dropdown-menu a {
+      padding: 0.75rem !important;
+      font-size: 0.9rem;
+    }
+    
+    .service-center-header .open-btn-div {
+      right: 0.5rem;
+    }
+    
+    .service-center-header nav .nav-close-btn {
+      right: 0.5rem;
+    }
+    
+    .service-center-header .open-btn-div .nav-open-btn {
+      padding: 0.4rem;
+      font-size: 1.5rem;
+    }
+    
+    .service-center-header .dropdown-menu a {
+      padding: 0.75rem !important;
+    }
   }

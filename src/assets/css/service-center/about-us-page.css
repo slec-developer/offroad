@@ -1,0 +1,437 @@
+@import './theme.css';
+
+/* About Hero Section */
+.about-hero-section {
+    position: relative;
+    background: url('./../../images/content/service-center-1.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.about-hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.about-hero-subtitle {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-cta-btn {
+    background: linear-gradient(135deg, #FF6B35 0%, #e55a2b 100%);
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.about-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+}
+
+/* Vision Mission Section */
+.vision-mission-section {
+    background: #ffffff;
+    padding: 6rem 0;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--army_green);
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.value-card {
+    background: white;
+    padding: 4rem 3rem;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f8f9fa;
+    text-align: center;
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--army_green), #FF6B35);
+}
+
+.value-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.value-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--army_green), #FF6B35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2.5rem;
+    color: white;
+    font-size: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.value-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--army_green);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.value-description {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #555;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* About Feature Section */
+.about-feature-section {
+    position: relative;
+    background: url('./../../images/content/service-center-2.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-feature-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.feature-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.feature-description {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Fix container spacing issues - Make specific to about-us page only */
+.about-hero-section .container-fluid,
+.about-feature-section .container-fluid,
+.vision-mission-section .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.about-hero-section .container-fluid .row,
+.about-feature-section .container-fluid .row,
+.vision-mission-section .container-fluid .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.about-hero-section .container-fluid .col-12,
+.about-hero-section .container-fluid .col-lg-8,
+.about-feature-section .container-fluid .col-12,
+.about-feature-section .container-fluid .col-lg-8,
+.vision-mission-section .container-fluid .col-12,
+.vision-mission-section .container-fluid .col-lg-8 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1400px) {
+    .about-hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .feature-title {
+        font-size: 2.8rem;
+    }
+    
+    .section-title {
+        font-size: 2.8rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-hero-title {
+        font-size: 3rem;
+    }
+    
+    .feature-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .value-card {
+        padding: 3.5rem 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .about-hero-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .feature-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .value-card {
+        padding: 3rem 2rem;
+    }
+    
+    .value-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 2.2rem;
+    }
+    
+    .value-title {
+        font-size: 2rem;
+    }
+    
+    .value-description {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-hero-section,
+    .about-feature-section {
+        background-attachment: scroll;
+    }
+    
+    .about-hero-title {
+        font-size: 2.2rem;
+        letter-spacing: 1.5px;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .feature-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .value-card {
+        padding: 2.5rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .value-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .value-title {
+        font-size: 1.8rem;
+    }
+    
+    .value-description {
+        font-size: 0.95rem;
+    }
+    
+    .about-cta-btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+    }
+    
+    /* Fix mobile spacing - Make specific to about-us page only */
+    .about-hero-section .container-fluid .col-12,
+    .about-hero-section .container-fluid .col-lg-8,
+    .about-feature-section .container-fluid .col-12,
+    .about-feature-section .container-fluid .col-lg-8,
+    .vision-mission-section .container-fluid .col-12,
+    .vision-mission-section .container-fluid .col-lg-8 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .about-hero-title {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .feature-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .value-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .value-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    .value-title {
+        font-size: 1.6rem;
+    }
+    
+    .value-description {
+        font-size: 0.9rem;
+    }
+    
+    .about-cta-btn {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+    
+    /* Fix small mobile spacing - Make specific to about-us page only */
+    .about-hero-section .container-fluid .col-12,
+    .about-hero-section .container-fluid .col-lg-8,
+    .about-feature-section .container-fluid .col-12,
+    .about-feature-section .container-fluid .col-lg-8,
+    .vision-mission-section .container-fluid .col-12,
+    .vision-mission-section .container-fluid .col-lg-8 {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about-hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .feature-title {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .value-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .value-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .value-title {
+        font-size: 1.4rem;
+    }
+    
+    .value-description {
+        font-size: 0.85rem;
+    }
+    
+    /* Fix extra small mobile spacing - Make specific to about-us page only */
+    .about-hero-section .container-fluid .col-12,
+    .about-hero-section .container-fluid .col-lg-8,
+    .about-feature-section .container-fluid .col-12,
+    .about-feature-section .container-fluid .col-lg-8,
+    .vision-mission-section .container-fluid .col-12,
+    .vision-mission-section .container-fluid .col-lg-8 {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+}

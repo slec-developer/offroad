@@ -1,24 +1,14 @@
+/* Services Page - Enhanced Design */
 .services_home_section {
     background-color: black;
     background-position: center;
     background-size: auto 100%;
     background-attachment: fixed;
-}
-
-.services_home_section {
     margin: 0;
     padding: 0;
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
     min-height: 100vh;
-}
-
-.services_home_section {
-    background-color: black;
-    background-position: center;
-    background-size: auto 100%;
-    background-attachment: fixed;
-    padding: 1vh 2vh 2vh 2vh;
 }
 
 .services_content_section {
@@ -35,43 +25,257 @@
     padding-bottom: 5vh;
 }
 
+/* Service Badge Styling */
 .srvcs-span-div {
     padding-bottom: 3vh;
 }
 
-/* .services-carousel-div {
-    overflow: hidden;
-    height: auto;
-} */
+.service-badge {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-badge:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.badge-text {
+    color: #ffffff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.badge-text strong {
+    font-weight: 700;
+}
+
+/* Service Description */
+.service-description {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 .services-p {
     font-size: 24px;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Call to Action Section */
+.cta-section {
+    margin-top: 2rem;
 }
 
 .services-book-btn {
     font-size: 24px;
+    transition: all 0.3s ease;
 }
+
+.services-book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(220, 20, 60, 0.3);
+}
+
+/* Partners Section */
+.partners-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.partners-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.partners-subtitle {
+    font-size: 1.2rem;
+    color: #333333;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Partners Logo Grid */
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.partner-logo-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    min-height: 80px;
+}
+
+.partner-logo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background: #f8f8f8;
+}
+
 .partners-logo {
     height: auto;
     width: 7vh;
-    margin-right: 2vh;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
 }
 
-@media only screen and (min-width:1000px) {
+.partner-logo-item:hover .partners-logo {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media only screen and (min-width: 1000px) {
     .services_home_section {
         background-size: cover;
-    }
-    .services_home_section {
         padding: 5vh 20vh 20vh 20vh;
     }
+    
     .services_content_section {
         padding: 10vh 20vh 20vh 20vh;
     }
-    .services-carousel-div {
-        /* max-height: 75vh; */
-    }
+    
     .partners-logo {
         height: 5vh;
         width: auto;
+    }
+    
+    .partners-grid {
+        gap: 3rem;
+    }
+    
+    .partner-logo-item {
+        min-width: 150px;
+        min-height: 100px;
+        padding: 2rem;
+    }
+    
+    .partners-title {
+        font-size: 3rem;
+    }
+    
+    .partners-subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-row-div {
+        padding-top: 8vh;
+        padding-bottom: 3vh;
+    }
+    
+    .service-badge {
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .badge-text {
+        font-size: 1rem;
+    }
+    
+    .services-p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    
+    .services-book-btn {
+        font-size: 20px;
+    }
+    
+    .partners-title {
+        font-size: 2rem;
+    }
+    
+    .partners-subtitle {
+        font-size: 1rem;
+    }
+    
+    .partners-grid {
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+    
+    .partner-logo-item {
+        min-width: 100px;
+        min-height: 70px;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-row-div {
+        padding-top: 6vh;
+        padding-bottom: 2vh;
+    }
+    
+    .service-badge {
+        padding: 0.5rem 1rem;
+    }
+    
+    .badge-text {
+        font-size: 0.9rem;
+    }
+    
+    .services-p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    
+    .services-book-btn {
+        font-size: 18px;
+    }
+    
+    .partners-title {
+        font-size: 1.8rem;
+    }
+    
+    .partners-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .partners-grid {
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    
+    .partner-logo-item {
+        min-width: 80px;
+        min-height: 60px;
+        padding: 0.75rem;
+    }
+    
+    .partners-logo {
+        width: 6vh;
     }
 }

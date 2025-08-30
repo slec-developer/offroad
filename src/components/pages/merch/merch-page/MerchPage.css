@@ -1,0 +1,574 @@
+/* MerchPage.css - Scoped to avoid conflicts with other pages */
+
+.merch-page .hero {
+    height: 100vh;
+    /* Temporary background color until we have the image */
+    background-image: url('/images/merch/merch-bg-home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .merch-page .hero1 {
+    height: 100vh;
+    /* Temporary background color until we have the image */
+    background-image: url('/images/merch/merch-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .merch-page .hero-content {
+    max-width: 620px;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .merch-page .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 500px;
+  }
+  
+  .merch-page .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 450px;
+  }
+  
+  .merch-page .subscribe-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .merch-page .subscribe-form input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-size: 1rem;
+    max-width: 300px;
+  }
+  
+  .merch-page .subscribe-form button {
+    padding: 0.75rem 2rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .merch-page .subscribe-form button:hover {
+    background: #333;
+  }
+  
+  /* We'll add more styles for other sections as we build them */
+  
+  .merch-page .featured-grid {
+    padding: 4rem 0;
+  }
+  
+  .merch-page .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .merch-page .grid-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+  }
+  
+  .merch-page .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .merch-page .grid-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .merch-page .collection-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+  }
+  
+  .merch-page .collection-overlay h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 1rem;
+    padding: 0.5rem;
+    color: #fff;
+    white-space: nowrap;
+    border: 2px solid #fff;
+  }
+  
+  /* Limited Edition Slides Section */
+.merch-page .limited-slides {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.merch-page .slides-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.merch-page .slides-carousel {
+  height: 100%;
+  position: relative;
+}
+
+.merch-page .slide {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.merch-page .slide-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.merch-page .slides-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
+  color: #fff;
+  padding: 0 3rem 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.merch-page .slides-overlay h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.merch-page .slides-overlay p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.merch-page .more-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  align-self: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.merch-page .more-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.merch-page .slides-images {
+  display: none;
+}
+
+.merch-page .slide-img {
+  display: none;
+}
+
+.merch-page .nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+}
+
+.merch-page .nav-arrow:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.merch-page .nav-prev {
+  left: 20px;
+}
+
+.merch-page .nav-next {
+  right: 20px;
+}
+
+.merch-page .pagination-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.merch-page .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.merch-page .dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .merch-page .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .merch-page .grid-item {
+    aspect-ratio: 16/9;
+  }
+
+  .merch-page .slides-overlay {
+    width: 80%;
+    padding: 2rem 1.5rem;
+  }
+  
+  .merch-page .slides-overlay h2 {
+    font-size: 2rem;
+  }
+  
+  .merch-page .nav-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .merch-page .nav-prev {
+    left: 10px;
+  }
+  
+  .merch-page .nav-next {
+    right: 10px;
+  }
+} 
+
+/* Sale Section */
+.merch-page .sale-section {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.merch-page .sale-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.merch-page .sale-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.merch-page .sale-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.merch-page .sale-product:hover {
+  transform: translateY(-5px);
+}
+
+.merch-page .product-image {
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #f8f8f8;
+}
+
+.merch-page .product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.merch-page .product-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+}
+
+/* Responsive adjustments for sale section */
+@media (max-width: 1024px) {
+  .merch-page .sale-products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .merch-page .sale-products {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .merch-page .sale-heading {
+    font-size: 2rem;
+  }
+  
+  .merch-page .product-image {
+    max-width: 200px;
+    height: 250px;
+  }
+} 
+
+/* Blog Section */
+.merch-page .blog-section {
+  padding: 4rem 0 2rem 0;
+  background: #fff;
+}
+
+.merch-page .blog-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.merch-page .blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.merch-page .blog-post-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.merch-page .blog-date-col {
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #222;
+  margin-top: 0.5rem;
+}
+
+.merch-page .blog-date-icon {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.merch-page .blog-date {
+  margin-left: 2.2rem;
+  margin-top: -1.5rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+.merch-page .blog-content-col {
+  flex: 1 1 0;
+  padding-right: 2rem;
+}
+
+.merch-page .blog-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.7rem;
+  color: #111;
+}
+
+.merch-page .blog-desc {
+  font-size: 1.05rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+  line-height: 1.5;
+}
+
+.merch-page .blog-image-col {
+  min-width: 220px;
+  max-width: 260px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.merch-page .blog-image {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.merch-page .blog-pagination {
+  text-align: right;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #222;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.merch-page .blog-collab {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+  font-size: 1rem;
+}
+
+.merch-page .blog-collab-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.merch-page .blog-collab-logos img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .merch-page .blog-post-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .merch-page .blog-image-col {
+    max-width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+  }
+  .merch-page .blog-image {
+    max-width: 100%;
+  }
+  .merch-page .blog-content-col {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .merch-page .blog-heading {
+    font-size: 2rem;
+  }
+  .merch-page .blog-list {
+    gap: 2.5rem;
+  }
+  .merch-page .blog-title {
+    font-size: 1.2rem;
+  }
+  .merch-page .blog-desc {
+    font-size: 0.95rem;
+  }
+} 

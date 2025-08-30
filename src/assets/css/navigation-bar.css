@@ -1,4 +1,5 @@
-header {
+/* Main Navigation Styles - Scoped to main header only */
+.main-header {
   background: rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
@@ -10,21 +11,60 @@ header {
   transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
-header nav {
+.main-header nav {
   margin: 0;
   padding: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1001;
 }
 
-nav a {
-  margin: 0 1.8rem;
+.main-header nav a {
+  margin: 0 0.8rem;
   color: black;
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px #888a8c; 
+  white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
+.main-header nav a:hover {
   color: red;
+}
+
+/* Nav link specific styles */
+.main-header .nav-link {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #888a8c;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+}
+
+.main-header .nav-link:hover {
+  color: red;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown item styles */
+.main-header .dropdown-item {
+  color: black !important;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.main-header .dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #495057 !important;
+}
+
+.main-header .dropdown-item:last-child {
+  border-bottom: none;
 }
 
 nav .autobot-ico {
@@ -41,51 +81,60 @@ header .nav-btn {
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
+  z-index: 1002;
 }
 
-.nav_div {
+.main-header .nav_div {
   padding-top: 0;
-  margin-top: 1vh;
+  margin-top: 0.2vh;
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  z-index: 1002;
 }
 
-.open-btn-div {
+.main-header .open-btn-div {
   display: none;
+  z-index: 1002;
 }
 
-.autobot-router-link {
+.main-header .autobot-router-link {
   display: block;
   margin: 0 30px 0 30px ;
 }
-.scrolled {
+
+.main-header.scrolled {
   background: rgba(0, 0, 0, 0.85);
   padding: 10px 20px;
   animation: fadeIn 0.3s ease-in-out;
 }
-.scrolled nav a {
+
+.main-header.scrolled nav a {
   color: white;
   animation: fadeIn 0.3s ease-in-out;
   text-shadow: none;
 }
 
-.scrolled nav a:hover {
+.main-header.scrolled nav a:hover {
   color: red;
 }
 
-
 /* Dropdown Styles */
-.nav-item {
+.main-header .nav-item {
   position: relative;
   min-width: 50px;
-  
+  margin: 0 0.3rem;
 }
 
-.dropdown-toggle {
+.main-header .dropdown-toggle {
   cursor: pointer;
   padding: 10px;
   position: relative;
 }
 
-.dropdown-menu {
+.main-header .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -100,9 +149,10 @@ header .nav-btn {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1003;
 }
 
-.dropdown-menu a {
+.main-header .dropdown-menu a {
   padding: 10px;
   text-decoration: none;
   color: black !important;
@@ -112,26 +162,16 @@ header .nav-btn {
   text-align: center;
 }
 
-.dropdown-menu a:hover {
+.main-header .dropdown-menu a:hover {
   background-color: #f0f0f0;
 }
 
 /* Show dropdown when open */
-.nav-item:hover .dropdown-menu,
-.nav-item .dropdown-menu.open {
+.main-header .nav-item:hover .dropdown-menu,
+.main-header .nav-item .dropdown-menu.open {
   opacity: 1;
   visibility: visible;
 }
-
-/* Ensure mobile compatibility */
-@media (max-width: 768px) {
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-  }
-}
-
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -143,63 +183,344 @@ header .nav-btn {
   }
 }
 
+/* Responsive Design */
 @media only screen and (max-width: 1300px) {
-
-  header .nav-btn {
+  .main-header .nav-btn {
     visibility: visible;
     opacity: 1;
   }
-  header nav {
+  
+  .main-header nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    background-color: black;
-    transition: 0.5s;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.95);
+    transition: all 0.5s ease;
     transform: translateY(-100vh);
-    opacity: 0.90;
+    opacity: 0;
+    z-index: 9999; /* Increased z-index to ensure it's above everything */
+    overflow: hidden;
+    pointer-events: none; /* Allow clicks to pass through initially */
   }
 
-  header .responsive_nav {
-    transform: none;
+  .main-header .responsive_nav {
+    transform: translateY(0);
+    opacity: 1;
+    overflow: visible;
+    pointer-events: auto; /* Enable clicks when menu is open */
   }
 
-  nav .nav-close-btn {
-    position: absolute;
+  .main-header nav .nav-close-btn {
+    position: fixed;
     top: 2rem;
     right: 2rem;
+    color: white;
+    font-size: 2rem;
+    z-index: 10000; /* Increased z-index to ensure it's above the overlay */
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .main-header nav .nav-close-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Ensure close button is always visible when menu is open */
+  .main-header.responsive_nav nav .nav-close-btn {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
-  nav a {
-    color: aliceblue;
+  /* Ensure responsive navigation is properly visible and above all other elements */
+  .main-header.responsive_nav {
+    z-index: 9999 !important;
+  }
+
+  .main-header.responsive_nav nav {
+    z-index: 9999 !important;
+  }
+
+  .main-header.responsive_nav .nav_div {
+    z-index: 10001 !important;
+    position: relative;
+  }
+
+  .main-header.responsive_nav nav a,
+  .main-header.responsive_nav .dropdown-menu,
+  .main-header.responsive_nav .dropdown-menu a,
+  .main-header.responsive_nav .nav-item,
+  .main-header.responsive_nav .nav-item .dropdown-toggle {
+    z-index: 10001 !important;
+    position: relative;
+  }
+
+  /* Force navigation options to be visible and above any overlays */
+  .main-header.responsive_nav .nav_div > * {
+    position: relative !important;
+    z-index: 10001 !important;
+    background: transparent !important;
+  }
+
+  /* Ensure dropdowns are properly visible */
+  .main-header.responsive_nav .dropdown-menu {
+    position: relative !important;
+    z-index: 10001 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .main-header nav a {
+    color: white;
     font-size: 1.5rem;
     width: 100%;
     text-align: center;
-    padding: 0.5rem;
-    text-shadow: none; 
+    padding: 1.5rem;
+    text-shadow: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 0;
+    z-index: 10001; /* Ensure navigation links are above the overlay */
   }
 
-  .open-btn-div {
+  .main-header nav a:hover {
+    color: #ff6b6b;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: #ff6b6b;
+  }
+
+  .main-header .open-btn-div {
     display: block;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    z-index: 10002; /* Ensure hamburger button is above the overlay */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
-  .open-btn-div .nav-open-btn {
-    float: right;
+  .main-header .open-btn-div .nav-open-btn {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .main-header .open-btn-div .nav-open-btn:hover {
+    background: rgba(0, 0, 0, 0.95);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+  }
+  
+  /* Hide hamburger icon when menu is open */
+  .main-header.responsive_nav .open-btn-div {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
-  .autobot-router-link {
+  .main-header .autobot-router-link {
     display: none;
   }
 
-  .nav_div {
-    padding-top: 2vh;
-    margin-top: 5vh;
+  .main-header .nav_div {
+    padding-top: 0;
+    margin-top: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    z-index: 10001; /* Ensure navigation container is above the overlay */
   }
   
+  /* Ensure all navigation items are centered */
+  .main-header .nav_div > * {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 10001; /* Ensure all navigation items are above the overlay */
+  }
+  
+  /* Mobile dropdown adjustments */
+  .main-header .dropdown-menu {
+    position: static !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: none !important;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 10001; /* Ensure dropdowns are above the overlay */
+  }
+  
+  .main-header .dropdown-menu a {
+    color: white !important;
+    padding: 0.75rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0.25rem 0;
+    font-size: 1.1rem;
+    z-index: 10001; /* Ensure dropdown links are above the overlay */
+  }
+  
+  .main-header .dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  /* Ensure consistent spacing for all nav items */
+  .main-header .nav-item {
+    margin: 0;
+    width: 100%;
+    z-index: 10001; /* Ensure nav items are above the overlay */
+  }
+  
+  .main-header .nav-item .dropdown-toggle {
+    margin: 0;
+    width: 100%;
+    z-index: 10001; /* Ensure dropdown toggles are above the overlay */
+  }
+  
+  /* Improve mobile navigation spacing */
+  .main-header .nav_div {
+    padding: 2rem 1rem;
+    gap: 0.5rem;
+  }
+  
+  /* Ensure proper alignment for all navigation items */
+  .main-header .nav_div > * {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .main-header .nav_div > *:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Additional responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .main-header {
+    padding: 0 1rem;
+  }
+  
+  .main-header nav {
+    gap: 1.5rem;
+  }
+  
+  .main-header nav a {
+    font-size: 1.3rem;
+    padding: 1.25rem;
+  }
+  
+  .main-header .dropdown-menu a {
+    padding: 0.75rem !important;
+    font-size: 1rem;
+  }
+  
+  .main-header .open-btn-div {
+    right: 1rem;
+  }
+  
+  .main-header nav .nav-close-btn {
+    right: 1rem;
+    top: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-header {
+    padding: 0 0.5rem;
+  }
+  
+  .main-header nav {
+    gap: 1rem;
+  }
+  
+  .main-header nav a {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  
+  .main-header .dropdown-menu a {
+    padding: 0.75rem !important;
+    font-size: 0.9rem;
+  }
+  
+  .main-header .open-btn-div {
+    right: 0.5rem;
+  }
+  
+  .main-header nav .nav-close-btn {
+    right: 0.5rem;
+    top: 1rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.25rem;
+  }
+  
+  .main-header .open-btn-div .nav-open-btn {
+    padding: 0.4rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Ensure mobile compatibility */
+@media (max-width: 768px) {
+  .main-header .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+}
+
+/* Ensure proper z-index layering for main navigation */
+.main-header {
+  z-index: 1000;
+}
+
+.main-header nav {
+  z-index: 1001;
+}
+
+/* Override any potential conflicting z-index values from landing page */
+.main-header.responsive_nav,
+.main-header.responsive_nav * {
+  z-index: 9999 !important;
+}
+
+.main-header.responsive_nav .nav_div,
+.main-header.responsive_nav .nav_div * {
+  z-index: 10001 !important;
+  position: relative !important;
 }

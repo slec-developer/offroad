@@ -1,61 +1,59 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/pages/Layout'
 import ServiceLayout from './components/pages/ServiceLayout'
+import MerchLayout from './components/pages/MerchLayout'
 import ScrollToTop  from './assets/js/ScrollToTop'
 
 import NotFound from './components/pages/main/error-page/NotFound'
+
 // Main Page Routes
-import Home from "./components/pages/main/landing-page/index";
-import About from './components/pages/main/about-us/index'
-import Services from './components/pages/main/services-page/index'
-import Collection from './components/pages/main/collection-page/featured-project-page/index'
-import FeaturedProject from './components/pages/main/collection-page/featured-project-page/FeaturedProject'
-import FeaturedUnit from './components/pages/main/collection-page/featured-project-page/FeaturedUnit'
-import ProjectUnit from './components/pages/main/collection-page/featured-project-page/ProjectUnit'
-import FeaturedBuild from './components/pages/main/collection-page/featured-build-page/index'
-import ProjectBuild from './components/pages/main/collection-page/featured-build-page/ProjectBuild'
-import Blog from './components/pages/main/media-page/blog-page/index'
-import Video from './components/pages/main/media-page/video-page/index'
+import mainRoutes from './routes/MainRoutes'
 // End of Main Page Routes
 
 // Services Page Routes
-import ServiceHome from "./components/pages/service-center/landing-page/Index";
+import serviceRoutes from './routes/ServiceRoutes'
 // End of Services Page Routes
 
 // Merch Page Routes
+import merchRoutes from './routes/MerchRoutes';
 // End of Merch Page Routes
 
 
+
 function App() {
+
+  // Chatbot using tawk.io
+  useEffect(() => {
+    var s1 = document.createElement("script");
+    s1.async = true;
+    s1.src = "https://embed.tawk.to/67d4d8df1d25d1190be36412/1imbmuafd"; 
+    s1.charset = "UTF-8";
+    s1.setAttribute("crossorigin", "*");
+    document.body.appendChild(s1);
+  }, []);
+
+
   return (
     <Router>
       <ScrollToTop/>
-      
       <Routes>
         <Route path="*" element={<NotFound />} />
-        // Main Page
+        {/* Main Page */}
         <Route path="/" element={<Layout/>}>
-          <Route index element={<Home />} />
-          <Route path="/about-us" element={<About/>}></Route>
-          <Route path="/services" element={<Services/>}></Route>
-          <Route path="/collection" element={<Collection/>}></Route>
-          <Route path="/featured-project" element={<FeaturedProject/>}></Route>
-          <Route path="/featured-unit/:categories" element={<FeaturedUnit/>}></Route>
-          <Route path="/project-unit/:categories/:project_unit" element={<ProjectUnit/>}></Route>
-          <Route path="/featured-build" element={<FeaturedBuild/>}></Route>
-          <Route path="/project-build/:unit_id" element={<ProjectBuild/>}></Route>
-          <Route path="/blog/:categories" element={<Blog/>}></Route>
-          <Route path="/video" element={<Video/>}></Route>
+          {mainRoutes}
         </Route>
-
-        // Service Center Page
+        {/* Service Center Page */}
         <Route path="/service-center" element={<ServiceLayout/>}>
-          <Route index element={<ServiceHome />} />
+          {/* <Route index element={<ServiceHome />} /> */}
+          {serviceRoutes}
         </Route>
-        // Merch Page
-        
-        
+        {/* Merch Page */}
+        <Route path="/merch" element={<MerchLayout/>}>
+          {/* <Route index element={<MerchLayout />} /> */}
+          {merchRoutes}
+        </Route>
+       
       </Routes>
     </Router>
   )

@@ -35,7 +35,7 @@
 }
 
 .section_tittle_div .right-icon {
-    margin-left: -2vh;  /* Space between right icon and text */
+    margin-left: -2vh;  /* Space between left icon and text */
 }
 
 .home_section, .services_section, .blog_section, .shop_here_section, .service_center_section, .powered_by_section, .contact, .footer_section, .service-footer-section {
@@ -302,7 +302,6 @@
     color:#d08111;
 }
 
-
 @media only screen and (min-width:720px) {
     .section_tittle_div .icon {
         width: 15vh;  /* Adjust size */
@@ -313,7 +312,7 @@
     }
     
     .section_tittle_div .right-icon {
-        margin-left: -3vh;  /* Space between right icon and text */
+        margin-left: -3vh;  /* Space between left icon and text */
     }
     .image_desc_div p {
         white-space: normal;  /* Allow wrapping */
@@ -343,7 +342,7 @@
     }
     
     .section_tittle_div .right-icon {
-        margin-left: -5vh;  /* Space between right icon and text */
+        margin-left: -5vh;  /* Space between left icon and text */
     }
     .small_desc_div {
         text-align: left;
@@ -386,7 +385,7 @@
         justify-content: center;
         max-width: 400px;
       }
-    
+     
       .secondary-navbar li {
         width: 100%;
         border-right: 1px solid #fff;

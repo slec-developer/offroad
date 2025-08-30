@@ -15,42 +15,58 @@ const productList = [
   {
     imageSrc: Shop1,
     RouterLink: "/",
-    productName: "OME BP 51 FRONT AND REAR SUSPENSION"
+    productName: "OME BP 51 FRONT AND REAR SUSPENSION",
+    price: "P25,999.00",
+    category: "Suspension"
   },
   {
     imageSrc: Shop2,
     RouterLink: "/about-us",
-    productName: "PROFENDER TUNESERIES"
+    productName: "PROFENDER TUNESERIES",
+    price: "P18,500.00",
+    category: "Suspension"
   },
   {
     imageSrc: Shop3,
     RouterLink: "/services",
-    productName: "KING COILSPRINGS"
+    productName: "KING COILSPRINGS",
+    price: "P12,800.00",
+    category: "Suspension"
   },
   {
     imageSrc: Shop4,
     RouterLink: "/featured-project",
-    productName: "DBA BIG BRAKE KIT"
+    productName: "DBA BIG BRAKE KIT",
+    price: "P32,500.00",
+    category: "Brake System"
   },
   {
     imageSrc: Shop1,
     RouterLink: "/",
-    productName: "OME BP 51 FRONT AND REAR SUSPENSION"
+    productName: "OME BP 51 FRONT AND REAR SUSPENSION",
+    price: "P25,999.00",
+    category: "Suspension"
   },
   {
     imageSrc: Shop3,
     RouterLink: "/services",
-    productName: "KING COILSPRINGS"
+    productName: "KING COILSPRINGS",
+    price: "P12,800.00",
+    category: "Suspension"
   },
   {
     imageSrc: Shop4,
     RouterLink: "/featured-project",
-    productName: "DBA BIG BRAKE KIT"
+    productName: "DBA BIG BRAKE KIT",
+    price: "P32,500.00",
+    category: "Brake System"
   },
   {
     imageSrc: Shop2,
     RouterLink: "/about-us",
-    productName: "PROFENDER TUNESERIES"
+    productName: "PROFENDER TUNESERIES",
+    price: "P18,500.00",
+    category: "Suspension"
   },
 ]
 
@@ -93,25 +109,26 @@ function ShoppingListModification() {
       };
   return (
     <div className="slider-container">
-    <h2>MODIFICATION</h2>
+    <h2 className="shopping-section-title">MODIFICATION</h2>
       <Slider {...settings}>
       {productList.map((product, index) => ( 
         <div key={index} className='p-3 mt-3'>
-          <Link to={product.RouterLink} className="product-link w-100 h-auto m-0 p-0">
-            <div className='card bg-transparent rounded-0 zoom-in'>
-              <div className="card-body product-bg p-3">
-                <img src={product.imageSrc} className="card-img-top w-100 h-auto" alt={`Service ${index + 1}`} />
-              </div>
-              <div className="row pt-3">
-                <div className='product-name-bg col-12 text-center'>
-                  <span to={product.RouterLink} className='product-name'>{product.productName}</span>
-                </div>
-              </div>
-             
-
+          <div className='shopping-product-card'>
+            <div className='shopping-product-image-container'>
+              <img src={product.imageSrc} className="shopping-product-image" alt={product.productName} />
             </div>
-          </Link>
-          
+            <div className="shopping-product-info">
+              <h6 className='shopping-product-name'>{product.productName}</h6>
+              <span className='shopping-product-category'>{product.category}</span>
+              <div className='shopping-product-price'>{product.price}</div>
+            </div>
+            <Link 
+              to={product.RouterLink}
+              className='shopping-buy-now-btn'
+            >
+              BUY NOW
+            </Link>
+          </div>
         </div>
       ))}
       </Slider>

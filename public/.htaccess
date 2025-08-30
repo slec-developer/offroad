@@ -1,0 +1,12 @@
+# Enable PHP processing
+AddHandler application/x-httpd-php .php
+
+# Set default MIME type for PHP files
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+# Enable CORS
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type"

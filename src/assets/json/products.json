@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Windshield Wipers",
+    "image": "shop-1.jpg",
+    "category": "Maintenance",
+    "link": "/products/windshield-wipers"
+  },
+  {
+    "id": 2,
+    "name": "High-Performance Engine Oil",
+    "image": "shop-2.jpg",
+    "category": "Lubricants",
+    "link": "/products/engine-oil"
+  },
+  {
+    "id": 3,
+    "name": "Brake Fluid DOT4",
+    "image": "shop-3.jpg",
+    "category": "Brake System",
+    "link": "/products/brake-fluid"
+  },
+  {
+    "id": 4,
+    "name": "Air Filter Premium",
+    "image": "shop-4.png",
+    "category": "Filters",
+    "link": "/products/air-filter"
+  },
+  {
+    "id": 5,
+    "name": "Coolant Antifreeze",
+    "image": "shop-5.jpg",
+    "category": "Cooling System",
+    "link": "/products/coolant"
+  },
+  {
+    "id": 6,
+    "name": "Transmission Fluid",
+    "image": "shop-6.jpg",
+    "category": "Transmission",
+    "link": "/products/transmission-fluid"
+  },
+  {
+    "id": 7,
+    "name": "Power Steering Fluid",
+    "image": "shop-7.jpg",
+    "category": "Steering",
+    "link": "/products/power-steering-fluid"
+  },
+  {
+    "id": 8,
+    "name": "Battery Terminal Cleaner",
+    "image": "shop-8.jpg",
+    "category": "Electrical",
+    "link": "/products/battery-cleaner"
+  },
+  {
+    "id": 9,
+    "name": "Tire Pressure Gauge",
+    "image": "shop-1.jpg",
+    "category": "Tires",
+    "link": "/products/tire-gauge"
+  },
+  {
+    "id": 10,
+    "name": "Car Wash Soap",
+    "image": "shop-2.jpg",
+    "category": "Cleaning",
+    "link": "/products/car-wash"
+  },
+   {
+    "id": 11,
+    "name": "Airpro",
+    "image": "shop-9.png",
+    "category": "Steering",
+    "link": "/products/power-steering-fluid"
+  },
+  {
+    "id": 12,
+    "name": "Spring Side",
+    "image": "shop-10.png",
+    "category": "Electrical",
+    "link": "/products/battery-cleaner"
+  },
+  {
+    "id": 13,
+    "name": "Prestone Coolant",
+    "image": "shop-11.png",
+    "category": "Tires",
+    "link": "/products/tire-gauge"
+  },
+  {
+    "id": 14,
+    "name": "High-flow Air Filter",
+    "image": "shop-12.png",
+    "category": "Cleaning",
+    "link": "/products/car-wash"
+  }
+]

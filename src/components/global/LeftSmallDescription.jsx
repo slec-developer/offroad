@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import './../../assets/css/global.css'
 
 function LeftSmallDescription({ rowClassName, DescBoxClass, BoxTittle, BoxDescription, RouterLink, BtnTittle }) {
   return (

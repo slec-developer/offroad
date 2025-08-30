@@ -9,29 +9,45 @@ function NavigationBar() {
   const navRef = useRef();
   const location = useLocation();
   const [scrolling, setScrolling] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Dropdown
-  // const [dropdownOpen, setDropdownOpen] = useState(false);
+  // Dropdown states
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [collectionDropdownOpen, setCollectionDropdownOpen] = useState(false);
   const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
+  const [shopDropdownOpen, setShopDropdownOpen] = useState(false);
 
-  const showNavBar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+  const toggleNavBar = () => {
+    const newMenuState = !isMenuOpen;
+    setIsMenuOpen(newMenuState);
+    
+    if (newMenuState) {
+      navRef.current.classList.add("responsive_nav");
+    } else {
+      navRef.current.classList.remove("responsive_nav");
+    }
+  };
+
+  const closeNavBar = () => {
+    setIsMenuOpen(false);
+    navRef.current.classList.remove("responsive_nav");
+    // Close all dropdowns when navigation is closed
+    setServicesDropdownOpen(false);
+    setMediaDropdownOpen(false);
+    setShopDropdownOpen(false);
   };
 
   // Handle dropdown behavior
-  const toggleServicesDropdown = () => setServicesDropdownOpen(!collectionDropdownOpen);
+  const toggleServicesDropdown = () => setServicesDropdownOpen(!servicesDropdownOpen);
   const openServicesDropdown = () => setServicesDropdownOpen(true);
   const closeServicesDropdown = () => setServicesDropdownOpen(false);
-
-  const toggleCollectionDropdown = () => setCollectionDropdownOpen(!collectionDropdownOpen);
-  const openCollectionDropdown = () => setCollectionDropdownOpen(true);
-  const closeCollectionDropdown = () => setCollectionDropdownOpen(false);
 
   const toggleMediaDropdown = () => setMediaDropdownOpen(!mediaDropdownOpen);
   const openMediaDropdown = () => setMediaDropdownOpen(true);
   const closeMediaDropdown = () => setMediaDropdownOpen(false);
+
+  const toggleShopDropdown = () => setShopDropdownOpen(!shopDropdownOpen);
+  const openShopDropdown = () => setShopDropdownOpen(true);
+  const closeShopDropdown = () => setShopDropdownOpen(false);
 
 //   useEffect(() => {
 //     const handleScroll = () => {
@@ -52,13 +68,16 @@ function NavigationBar() {
     <header className='service-center-header p-0 m-0'>
       <nav className="w-100 m-0" ref={navRef}>
         <div className="nav_div container d-flex flex-wrap justify-content-start align-items-center">
-        <Link to="/" onClick={showNavBar}>
-          <i className="fas fa-caret-left fa-3x orange-color"></i>
-        </Link>
-        <Link to="/" className="autobot-router-link">
-            <img src={ AutobotIco} className="autobot-service-ico" alt="Autobot Offroad PH" />
-        </Link>
-          <Link to="/about-us" onClick={showNavBar}>About Us</Link>
+          <Link to="/" onClick={closeNavBar} className="back-link">
+            <i className="fas fa-caret-left fa-3x orange-color"></i>
+            <span className="back-text">Back to Main Site</span>
+          </Link>
+          <Link to="/service-center" className="autobot-router-link">
+            <img src={AutobotIco} className="autobot-service-ico" alt="Autobot Offroad PH" />
+          </Link>
+          
+          <Link to="/service-center/about-us" onClick={closeNavBar} className="nav-link">About Us</Link>
+          
           {/* Dropdown for Services */}
           <div 
             className="nav-item dropdown" 
@@ -67,19 +86,20 @@ function NavigationBar() {
           >
             <Link 
               onClick={toggleServicesDropdown} 
-              className="dropdown-toggle"
+              className="dropdown-toggle nav-link"
             >
-            Services
+              Services
             </Link>
             {servicesDropdownOpen && (
               <div className="dropdown-menu">
-                <Link to="/services"   onClick={showNavBar}>Service</Link>
-                <Link to="/service-center" onClick={showNavBar}>Service Center</Link>
+                <Link to="/services" onClick={closeNavBar}>Service</Link>
+                <Link to="/service-center" onClick={closeNavBar}>Service Center</Link>
+                <Link to="after-care" onClick={closeNavBar}>After Care</Link>
               </div>
             )}
           </div>
 
-          {/* Dropdown for Collection */}
+          {/* Dropdown for Media */}
           <div 
             className="nav-item dropdown" 
             onMouseEnter={openMediaDropdown} 
@@ -87,29 +107,54 @@ function NavigationBar() {
           >
             <Link 
               onClick={toggleMediaDropdown} 
-              className="dropdown-toggle"
+              className="dropdown-toggle nav-link"
             >
               Media
             </Link>
             {mediaDropdownOpen && (
               <div className="dropdown-menu">
-                <Link to="/blog/news"   onClick={showNavBar}>Blog</Link>
-                <Link to="/video" onClick={showNavBar}>Video</Link>
+                <Link to="/blog/news" onClick={closeNavBar}>Blog</Link>
+                <Link to="/video" onClick={closeNavBar}>Video</Link>
               </div>
             )}
           </div>
-          <Link to="/merchant" onClick={showNavBar}>Shop</Link>
-          <button className="nav-btn nav-close-btn" onClick={showNavBar}>
+          
+          {/* Dropdown for Shop */}
+          <div 
+            className="nav-item dropdown" 
+            onMouseEnter={openShopDropdown} 
+            onMouseLeave={closeShopDropdown}
+          >
+            <Link 
+              onClick={toggleShopDropdown} 
+              className="dropdown-toggle nav-link"
+            >
+              Shop
+            </Link>
+            {shopDropdownOpen && (
+              <div className="dropdown-menu">
+                <Link to="shop" onClick={closeNavBar}>Shop</Link>
+                <Link to="/merch" onClick={closeNavBar}>Merchant</Link>
+              </div>
+            )}
+          </div>
+
+          <Link to="/service-center/contact-us" onClick={closeNavBar} className="nav-link">Contact Us</Link>
+          
+          <button className="nav-btn nav-close-btn" onClick={toggleNavBar}>
             <FaTimes />
           </button>
         </div>
       </nav>
 
-      <div className='open-btn-div col-12'>
-        <button className="nav-btn nav-open-btn top-0 end-0 m-3" onClick={showNavBar}>
-          <FaBars />
-        </button>
-      </div>
+      {/* Show hamburger icon only when menu is closed */}
+      {!isMenuOpen && (
+        <div className='open-btn-div col-12'>
+          <button className="nav-btn nav-open-btn top-0 end-0 m-3" onClick={toggleNavBar}>
+            <FaBars />
+          </button>
+        </div>
+      )}
     </header>
   );
 }

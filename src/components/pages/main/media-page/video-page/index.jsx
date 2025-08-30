@@ -8,20 +8,29 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 import videoList from "./../../../../../assets/json/video-gallery.json"
 
-
 const RecordsPerPage = 16; // Show 8 records per page
-
-
 
 function index() {
 
   const [currentPage, setCurrentPage] = useState(1);
+  const [sortOrder, setSortOrder] = useState('asc'); // 'asc' or 'desc'
+  
   // Calculate total pages
   const totalPages = Math.ceil(videoList.length / RecordsPerPage);
+  
+  // Sort videos by title
+  const sortedVideos = [...videoList].sort((a, b) => {
+    if (sortOrder === 'asc') {
+      return a.title.localeCompare(b.title);
+    } else {
+      return b.title.localeCompare(a.title);
+    }
+  });
+  
   // Get records for the current page
   const indexOfLastRecord = currentPage * RecordsPerPage;
   const indexOfFirstRecord = indexOfLastRecord - RecordsPerPage;
-  const currentRecords = videoList.slice(indexOfFirstRecord, indexOfLastRecord);
+  const currentRecords = sortedVideos.slice(indexOfFirstRecord, indexOfLastRecord);
 
   // Handle Pagination
   const nextPage = () => {
@@ -32,16 +41,25 @@ function index() {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
+  // Handle Sort Toggle
+  const toggleSort = () => {
+    setSortOrder(prevOrder => prevOrder === 'asc' ? 'desc' : 'asc');
+    setCurrentPage(1); // Reset to first page when sorting
+  };
+
   // Utility to extract video ID and build embed URL
   const getEmbedUrl = (url) => {
     const videoId = new URL(url).searchParams.get("v");
-    return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    return `https://www.youtube.com/embed/${videoId}?autoplay=0`;
   };
 
   useEffect(() => {
     Fancybox.bind("[data-fancybox]", {
       Toolbar: {
         display: ["close"],
+      },
+      video: {
+        autoStart: true, // Let Fancybox handle autoplay safely
       },
     });
 
@@ -65,12 +83,26 @@ function index() {
             DescBoxClass="" 
             BoxTittle="Manila Auto Salon 2024 Highlights"
             BoxDescription="Where innovation meets adventure. Autobot Autoworks is the ultimate destination for off-road modifications, turning SUVs and 4x4s into unstoppable beasts. From full-build transformations to top-tier custom paint and detailing, we make sure your rig is always adventure-ready—on and off the road."
-            RouterLink="/about-us"
+            RouterLink="/all-video"
             BtnTittle="See Video"
         />
       </div>
     </div>
     <div className="container-fluid video-list-section" >
+
+      {/* Sort Button */}
+      <div className="row m-0 p-0 mb-4">
+        <div className="col-12 sort-btn-container">
+          <button 
+            onClick={toggleSort} 
+            className="sort-btn"
+            title={`Sort by title (${sortOrder === 'asc' ? 'A-Z' : 'Z-A'})`}
+          >
+            <i className={`fas fa-sort-alpha-${sortOrder === 'asc' ? 'down' : 'up'}`}></i>
+            Sort by Title {sortOrder === 'asc' ? '(A-Z)' : '(Z-A)'}
+          </button>
+        </div>
+      </div>
 
       <div className="video-gallery row">
         {currentRecords.map((video, index) => (

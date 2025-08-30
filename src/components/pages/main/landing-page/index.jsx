@@ -30,45 +30,48 @@ import MerchOne from './../../../../assets/images/merch/merch-1.jpg'
 import MerchTwo from './../../../../assets/images/merch/merch-2.jpg'
 import MerchThree from './../../../../assets/images/merch/merch-3.jpg'
 
+// Import products data
+import productsData from './../../../../assets/json/products.json'
+
 const servicesData = [
   {
     imageSrc: ServiceOne,
-    RouterLink: "/services",
+    RouterLink: "/service-center/after-care",
     BtnTittle: "Off-road Vehicle Customization"
   },
   {
     imageSrc: ServiceTwo,
-    RouterLink: "/services",
+    RouterLink: "/service-center/after-care",
     BtnTittle: "Vehicle Maintenance and Repairs"
   },
   {
     imageSrc: ServiceThree,
-    RouterLink: "/services",
+    RouterLink: "/service-center/after-care",
     BtnTittle: "Suspension Upgrades"
   },
   {
     imageSrc: ServiceFour,
-    RouterLink: "/services",
+    RouterLink: "/service-center/after-care",
     BtnTittle: "Fabrication Services"
   },
   {
     imageSrc: ServiceFive,
-    RouterLink: "/services",
+    RouterLink: "/service-center/after-care",
     BtnTittle: "Tire and Wheels"
   },
   {
     imageSrc: ServiceSix,
-    RouterLink: "/services",
+    RouterLink: "/service-center/after-care",
     BtnTittle: "4x4 Parts and Accesories"
   },
   {
     imageSrc: ServiceSeven,
-    RouterLink: "/services",
+    RouterLink: "/service-center/after-care",
     BtnTittle: "Performance Upgrades"
   },
   {
     imageSrc: ServiceEight,
-    RouterLink: "/services",
+    RouterLink: "/service-center/after-care",
     BtnTittle: "Vehicle Inspection"
   },
 ];
@@ -92,15 +95,13 @@ function index() {
           </div>
           <LeftSmallDescription 
               DescBoxClass="" 
-              BoxTittle="Quality built since ‘07"
+              BoxTittle="Quality built since '07"
               BoxDescription="Where innovation meets adventure. Autobot Autoworks is the ultimate destination for off-road modifications, turning SUVs and 4x4s into unstoppable beasts. From full-build transformations to top-tier custom paint and detailing, we make sure your rig is always adventure-ready—on and off the road."
               RouterLink="/about-us"
               BtnTittle="More"
           />
         </div>
-        
       </div>
-      <SectionTitle tittle="SERVICES"/>
       <div className="container-fluid services_section p-0" >
         <div className='service-box-row row p-0 m-0'>
 
@@ -121,7 +122,7 @@ function index() {
       <SectionTitle tittle="FEATURED BUILD"/>
       
       <div className="container-fluid featured_build_section" >
-      
+       
         <FeaturedBuildCarousel />
         <div className="fb-overlay ">
           <LeftSmallDescription 
@@ -143,7 +144,7 @@ function index() {
               <LeftImageDescription 
                   DescBoxClass="transparent_black" 
                   BoxTittle="MARCH MADNESS SALE"
-                  BoxDescription="This March, Autobot Offroad is bringing the ultimate upgrade season with insane deals on off-road essentials, accessories, and performance mods! Whether you're looking for a full build, suspension upgrades, or lighting enhancements, now’s the time to level up your rig without breaking the bank."
+                  BoxDescription="This March, Autobot Offroad is bringing the ultimate upgrade season with insane deals on off-road essentials, accessories, and performance mods! Whether you're looking for a full build, suspension upgrades, or lighting enhancements, now's the time to level up your rig without breaking the bank."
                   RouterLink="/about-us"
                   BtnTittle="More"
               />
@@ -199,7 +200,7 @@ function index() {
         <LeftSmallDescription 
             rowClassName="lsd_box_row"
             DescBoxClass="transparent_black" 
-            BoxTittle="Quality built since ‘07"
+            BoxTittle="Quality built since '07"
             BoxDescription="Where innovation meets adventure. Autobot Autoworks is the ultimate destination for off-road modifications, turning SUVs and 4x4s into unstoppable beasts. From full-build transformations to top-tier custom paint and detailing, we make sure your rig is always adventure-ready—on and off the road."
             RouterLink="/about-us"
             BtnTittle="More"
@@ -210,7 +211,7 @@ function index() {
         <LeftSmallDescription 
             rowClassName="lsd_box_row"
             DescBoxClass="transparent_black" 
-            BoxTittle="Quality built since ‘07"
+            BoxTittle="Quality built since '07"
             BoxDescription="Where innovation meets adventure. Autobot Autoworks is the ultimate destination for off-road modifications, turning SUVs and 4x4s into unstoppable beasts. From full-build transformations to top-tier custom paint and detailing, we make sure your rig is always adventure-ready—on and off the road."
             RouterLink="/about-us"
             BtnTittle="More"
@@ -248,10 +249,42 @@ function index() {
       </div>
       <SectionTitle tittle="POWERED BY"/>
       <div className="container-fluid powered_by_section" >
-        <div className='row m-0'>
+        <div className="powered-by-content">
+          <div className="powered-by-header">
+            <h2 className="powered-by-title">Our Network Across the Philippines</h2>
+            <p className="powered-by-subtitle">From Luzon to Mindanao, Autobot Autoworks powers automotive excellence nationwide</p>
+          </div>
+          
+          <div className='row m-0'>
             <div className='col-12 p-5 d-flex justify-content-center align-items-center'>
-              <img src={PhilMap} className='ph_map img-fluid' alt="" />
+              <div className="map-container">
+                <img src={PhilMap} className='ph_map img-fluid' alt="Philippines Map with Autobot Branch Locations" />
+                <div className="map-overlay">
+                  <div className="branch-info">
+                    <h3>Strategic Locations</h3>
+                    <p>Multiple branches serving every region</p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          
+          <div className="powered-by-footer">
+            <div className="stats-container">
+              <div className="stat-item">
+                <div className="stat-number">18+</div>
+                <div className="stat-label">Years of Excellence</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">5+</div>
+                <div className="stat-label">Branch Locations</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">1000+</div>
+                <div className="stat-label">Happy Customers</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

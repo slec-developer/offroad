@@ -170,44 +170,69 @@ const partnersLogo = [
     },
 ];
 
-
-
-function services() {
+function Services() {
   return (
     <>
+        {/* Hero Section */}
         <div className="container-fluid services_home_section">
             <div className="services-row-div row m-0">
+                {/* Service Badge */}
                 <div className='srvcs-span-div col-12 m-0 d-flex justify-content-center align-items-center'>
-                    <span className='border border-white p-3'>
-                        <strong className='text-white'>OFF-ROAD VEHICLE CUSTOMIZATION</strong>
-                    </span>
+                    <div className='service-badge'>
+                        <span className='badge-text'>
+                            <strong>OFF-ROAD VEHICLE CUSTOMIZATION</strong>
+                        </span>
+                    </div>
                 </div>
+                
+                {/* Carousel Section */}
                 <div className='services-carousel-div col-12 m-0'>
                     <SwiperCarousel />
                 </div>
+                
+                {/* Service Description */}
                 <div className='col-12 m-0 p-3 d-flex justify-content-center align-items-center text-center'>
-                    <p className='services-p mt-5'>We modify vehicles for off-road adventures, equipping them with essential upgrades such as lift kits, skid plates, winches, and lighting solutions to enhance durability and capability.</p>
+                    <div className="service-description">
+                        <p className='services-p mt-5'>
+                            We modify vehicles for off-road adventures, equipping them with essential upgrades such as lift kits, skid plates, winches, and lighting solutions to enhance durability and capability.
+                        </p>
+                    </div>
                 </div>
+                
+                {/* Call to Action Button */}
                 <div className='col-12 m-0 d-flex justify-content-center align-items-center'>
-                    <RedRouteBtn
-                        BtnClassName="services-book-btn sp-wide fw-bold "
-                        RouterLink="/"
-                        BtnTittle="BOOK NOW!"
-                    />
+                    <div className="cta-section">
+                        <RedRouteBtn
+                            BtnClassName="services-book-btn sp-wide fw-bold"
+                            RouterLink="/service-center/contact-us"
+                            BtnTittle="BOOK NOW!"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
+
+        {/* Partners Section */}
         <div className="container-fluid services_content_section">
             <div className='row m-0 p-0'>
                 <div className='col-12 m-0 p-1'>
-                    <div className="d-flex flex-row flex-wrap mb-3">
-
-                    {partnersLogo.map((logo, index) => (
-                        <div key={index} className="p-2 m-2">
-                            <img className="partners-logo" src={logo.imageSrc} alt={`Logo ${index + 1}`} />
-                        </div>
-                    ))}
-                        
+                    {/* Partners Header */}
+                    <div className="partners-header">
+                        <h2 className="partners-title">Our Trusted Partners</h2>
+                        <p className="partners-subtitle">Premium brands that power our custom builds</p>
+                    </div>
+                    
+                    {/* Partners Logo Grid */}
+                    <div className="partners-grid">
+                        {partnersLogo.map((logo, index) => (
+                            <div key={index} className="partner-logo-item">
+                                <img 
+                                    className="partners-logo" 
+                                    src={logo.imageSrc} 
+                                    alt={`Partner Logo ${index + 1}`} 
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -216,4 +241,4 @@ function services() {
   )
 }
 
-export default services
+export default Services

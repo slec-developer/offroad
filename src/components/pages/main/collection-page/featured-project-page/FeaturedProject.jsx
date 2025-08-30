@@ -31,6 +31,15 @@ const nextPage = () => {
     <>
         <div className="container-fluid fp_category_section">
             <div className='row m-0 mt-5 p-0'>
+                {/* Back Button */}
+                <div className='col-12 m-0 p-3'>
+                    <div className="back-button-container">
+                        <Link to="/collection" className="back-link">
+                            <i className="fas fa-chevron-left"></i> Collection
+                        </Link>
+                    </div>
+                </div>
+                
                 <div className='col-12 m-0 p-5'>
                     <h1 className='ml-5'>FEATURED PROJECT</h1>
                 </div>

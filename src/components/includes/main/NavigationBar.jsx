@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import "./../../../assets/css/navigation-bar.css";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -8,20 +8,39 @@ import AutobotLogo from './../../../assets/images/ico/autobot-logo.png';
 function NavigationBar() {
   const navRef = useRef();
   const location = useLocation();
-  const [scrolling, setScrolling] = useState(false);
+  // const [scrolling, setScrolling] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Dropdown
   // const [dropdownOpen, setDropdownOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [collectionDropdownOpen, setCollectionDropdownOpen] = useState(false);
   const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
+  const [shopDropdownOpen, setShopDropdownOpen] = useState(false);
 
   const showNavBar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+    const newMenuState = !isMenuOpen;
+    setIsMenuOpen(newMenuState);
+    
+    if (newMenuState) {
+      navRef.current.classList.add("responsive_nav");
+    } else {
+      navRef.current.classList.remove("responsive_nav");
+    }
+  };
+
+  const closeNavBar = () => {
+    setIsMenuOpen(false);
+    navRef.current.classList.remove("responsive_nav");
+    // Close all dropdowns when navigation is closed
+    setServicesDropdownOpen(false);
+    setCollectionDropdownOpen(false);
+    setMediaDropdownOpen(false);
+    setShopDropdownOpen(false);
   };
 
   // Handle dropdown behavior
-  const toggleServicesDropdown = () => setServicesDropdownOpen(!collectionDropdownOpen);
+  const toggleServicesDropdown = () => setServicesDropdownOpen(!servicesDropdownOpen);
   const openServicesDropdown = () => setServicesDropdownOpen(true);
   const closeServicesDropdown = () => setServicesDropdownOpen(false);
 
@@ -33,27 +52,31 @@ function NavigationBar() {
   const openMediaDropdown = () => setMediaDropdownOpen(true);
   const closeMediaDropdown = () => setMediaDropdownOpen(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (location.pathname === "/") {
-        setScrolling(window.scrollY > 50);
-      } else {
-        setScrolling(true);
-      }
-    };
+  const toggleShopDropdown = () => setShopDropdownOpen(!shopDropdownOpen);
+  const openShopDropdown = () => setShopDropdownOpen(true);
+  const closeShopDropdown = () => setShopDropdownOpen(false);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (location.pathname === "/") {
+  //       setScrolling(window.scrollY > 50);
+  //     } else {
+  //       setScrolling(true);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [location.pathname]);
 
   return (
-    <header className={`p-0 m-0 ${scrolling ? "scrolled" : ""}`}>
+    <header className={`main-header p-0 m-0 scrolled`}>
       <nav className="w-100 m-0" ref={navRef}>
-        <div className="nav_div container pt-5 d-flex flex-wrap justify-content-center align-items-center">
-          <Link to="/" onClick={showNavBar}>Home</Link>
-          <Link to="/about-us" onClick={showNavBar}>About Us</Link>
+        <div className="nav_div container-fluid d-flex flex-wrap justify-content-center align-items-center">
+          <Link to="/" onClick={closeNavBar} className="nav-link">Home</Link>
+          <Link to="/about-us" onClick={closeNavBar} className="nav-link">About Us</Link>
           {/* Dropdown for Services */}
           <div 
             className="nav-item dropdown" 
@@ -62,14 +85,15 @@ function NavigationBar() {
           >
             <Link 
               onClick={toggleServicesDropdown} 
-              className="dropdown-toggle"
+              className="dropdown-toggle nav-link"
             >
             Services
             </Link>
             {servicesDropdownOpen && (
               <div className="dropdown-menu">
-                <Link to="/services"   onClick={showNavBar}>Service</Link>
-                <Link to="/service-center" onClick={showNavBar}>Service Center</Link>
+                <Link to="/services" onClick={closeNavBar} className="dropdown-item">Service</Link>
+                <Link to="/service-center" onClick={closeNavBar} className="dropdown-item">Service Center</Link>
+                <Link to="/service-center/after-care" onClick={closeNavBar} className="dropdown-item">After Care</Link>
               </div>
             )}
           </div>
@@ -81,23 +105,23 @@ function NavigationBar() {
           >
             <Link 
               onClick={toggleCollectionDropdown} 
-              className="dropdown-toggle"
+              className="dropdown-toggle nav-link"
             >
               Collection
             </Link>
             {collectionDropdownOpen && (
               <div className="dropdown-menu">
-                <Link to="/collection"   onClick={showNavBar}>Featured Project</Link>
-                <Link to="/featured-build" onClick={showNavBar}>Featured Build</Link>
+                <Link to="/collection" onClick={closeNavBar} className="dropdown-item">Featured Project</Link>
+                <Link to="/featured-build" onClick={closeNavBar} className="dropdown-item">Featured Build</Link>
               </div>
             )}
           </div>
 
           <Link to="/" className="autobot-router-link">
-            <img src={scrolling ? AutobotLogo : AutobotIco} className="autobot-ico" alt="Autobot Offroad PH" />
+            <img src={ AutobotLogo } className="autobot-ico" alt="Autobot Offroad PH" />
           </Link>
 
-          {/* Dropdown for Collection */}
+          {/* Dropdown for Media */}
           <div 
             className="nav-item dropdown" 
             onMouseEnter={openMediaDropdown} 
@@ -105,30 +129,52 @@ function NavigationBar() {
           >
             <Link 
               onClick={toggleMediaDropdown} 
-              className="dropdown-toggle"
+              className="dropdown-toggle nav-link"
             >
               Media
             </Link>
             {mediaDropdownOpen && (
               <div className="dropdown-menu">
-                <Link to="/blog/news"   onClick={showNavBar}>Blog</Link>
-                <Link to="/video" onClick={showNavBar}>Video</Link>
+                <Link to="/blog/news" onClick={closeNavBar} className="dropdown-item">Blog</Link>
+                <Link to="/video" onClick={closeNavBar} className="dropdown-item">Video</Link>
               </div>
             )}
           </div>
-          <Link to="/merchant" onClick={showNavBar}>Shop</Link>
-          <Link to="/contact" onClick={showNavBar}>Contact Us</Link>
-          <Link to="/register" onClick={showNavBar}>Register</Link>
+
+          {/* Dropdown for Shop */}
+          <div 
+            className="nav-item dropdown" 
+            onMouseEnter={openShopDropdown} 
+            onMouseLeave={closeShopDropdown}
+          >
+            <Link 
+              onClick={toggleShopDropdown} 
+              className="dropdown-toggle nav-link"
+            >
+              Shop
+            </Link>
+            {shopDropdownOpen && (
+              <div className="dropdown-menu">
+                <Link to="/service-center/shop" onClick={closeNavBar} className="dropdown-item">Shop</Link>
+                <Link to="/merch" onClick={closeNavBar} className="dropdown-item">Merchant</Link>
+              </div>
+            )}
+          </div>
+
+          <Link to="/service-center/contact-us" onClick={closeNavBar} className="nav-link">Contact Us</Link>
+          <Link to="/register" onClick={closeNavBar} className="nav-link">Register</Link>
           <button className="nav-btn nav-close-btn" onClick={showNavBar}>
             <FaTimes />
           </button>
         </div>
       </nav>
 
-      <div className='open-btn-div col-12'>
-        <button className="nav-btn nav-open-btn top-0 end-0 m-3" onClick={showNavBar}>
-          <FaBars />
-        </button>
+      <div className='open-btn-div'>
+        {!isMenuOpen && (
+          <button className="nav-btn nav-open-btn" onClick={showNavBar}>
+            <FaBars />
+          </button>
+        )}
       </div>
     </header>
   );

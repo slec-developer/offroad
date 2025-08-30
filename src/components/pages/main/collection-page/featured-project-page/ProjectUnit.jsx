@@ -7,8 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay, Mousewheel, Keyboard } from "swiper/modules";
 
 import LightGallery from "lightgallery/react";
@@ -17,39 +15,6 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import lgVideo from 'lightgallery/plugins/video';
 
 import featuredProject from "./../../../../../assets/json/featured-project.json"
-
-const styles = {
-    galleryContainer: {
-      display: "flex",
-      flexWrap: "wrap",
-      gap: "10px",
-      padding: "20px",
-    },
-    largeImageContainer: {
-      flex: "1 1 60%", // Large image takes more space
-      minWidth: "300px",
-    },
-    smallImagesContainer: {
-      flex: "1 1 40%", // Small images take less space
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
-      gap: "10px",
-    },
-    largeImage: {
-      width: "100%",
-      height: "auto",
-      borderRadius: "8px",
-      cursor: "pointer",
-    },
-    smallImage: {
-      width: "100%",
-      height: "auto",
-      borderRadius: "8px",
-      cursor: "pointer",
-    },
-  };
-  
-
 
 function ProjectUnit() {
     const { categories } = useParams(); 
@@ -64,98 +29,169 @@ function ProjectUnit() {
   
     // Handle case where unit is not found
     if (!projectUnit) {
-        return <p className="text-center text-muted">Project unit not found.</p>;
+        return (
+            <div className="project-not-found">
+                <div className="not-found-content">
+                    <i className="fas fa-exclamation-triangle fa-3x mb-3"></i>
+                    <h2>Project Unit Not Found</h2>
+                    <p>The requested project unit could not be found.</p>
+                </div>
+            </div>
+        );
     }
 
     return (
         <div className="container-fluid project_unit_section">
-            <div className="row m-0 p-0">
-                <div className="col-12 m-0 p-0">
+            {/* Hero Section */}
+            <div className="hero-section">
+                <div className="hero-image-container">
                     <img 
                         src={`/assets/images/featured-project/${projectUnit.imgSrc}`} 
-                        className="card-img-top rounded-0 mt-3 w-100 h-auto" 
+                        className="hero-image" 
                         alt={projectUnit.title} 
                     />
+                    <div className="hero-overlay">
+                        <div className="hero-content">
+                            <h1 className="project-title">{projectUnit.title}</h1>
+                            <div className="project-category">
+                                <span className="category-badge">{projectCategory.title}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="row m-0 p-0 mt-3">
-                <div className="col-12 p-3 text-center">
-                    <h3>{projectUnit.title}</h3>
-                </div>
-                <div className='col-12 mt-5'>
-                    <div dangerouslySetInnerHTML={{ __html: projectUnit.first_description }} />
-                </div>
-                <div className='proj_unit_carousel col-12 m-0 p-0 mt-5'>
-                    {projectUnit.images && projectUnit.images.length > 0 ? (
-                         
-                        <Swiper
-                                modules={[Navigation, Pagination, Autoplay]}
-                                spaceBetween={10}
-                                slidesPerView={1}
-                                navigation={true}
-                                pagination={{ clickable: true }}
-                                autoplay={{ delay: 3000 }}
-                                className="m-0 p-0"
-                            >
-                            
-                            {projectUnit.images.map((image, index) => (
-                                 <SwiperSlide key={index} className="m-0 p-0">
-                                    <img 
-                                        key={index} 
-                                        src={`/assets/images/featured-project/${image.imgSrc}`} 
-                                        className="card-img-top rounded-0 m-2 w-100 h-auto" 
-                                        alt={`Project Unit ${index + 1}`} 
-                                    />
-                                 </SwiperSlide>
-                            
-                            ))}
-                            </Swiper>
-                    ) : (
-                        <p className="text-muted">No image available.</p>
-                    )}
-                </div>
-                <div className='col-12 mt-5'>
-                    <div dangerouslySetInnerHTML={{ __html: projectUnit.second_description }} />
-                </div>
-                <div className='col-lg-10 col-md-10 col-sm-12 mx-auto mt-5'>
-                {projectUnit.images && projectUnit.images.length > 0 ? (
-                    <>
-                    <Swiper
-                            modules={[Navigation, Pagination, Autoplay, Mousewheel, Keyboard]}
-                            spaceBetween={10}
-                            slidesPerView={1}
-                            navigation={true}
-                            pagination={{ clickable: true }}
-                            autoplay={{ delay: 3000 }}
-                            cssMode={true}
-                            mousewheel={true}
-                            keyboard={true}
-                            className="m-0 p-0"
-                        >
-                            
-                            {projectUnit.images.map((image, index) => (
-                                    <SwiperSlide key={index} className="m-0 p-0">
-                                    <img 
-                                        key={index} 
-                                        src={`/assets/images/featured-project/${image.imgSrc}`} 
-                                        className="card-img-top rounded-0 m-2 w-100 h-auto" 
-                                        alt={`Project Unit ${index + 1}`} 
-                                    />
-                                    </SwiperSlide>
-                            
-                            ))}
-                            </Swiper>
 
-                             {/* ✅ Manually add Next/Prev buttons */}
-                            <div className="swiper-button-prev"></div>
-                            <div className="swiper-button-next"></div>
-                            </>
-                    ) : (
-                        <p className="text-muted">No image available.</p>
+            {/* Project Content */}
+            <div className="project-content">
+                <div className="container">
+                    {/* First Description */}
+                    <div className="description-section">
+                        <div className="section-header">
+                            <h2 className="section-title">Project Overview</h2>
+                            <div className="section-divider"></div>
+                        </div>
+                        <div className="description-content" dangerouslySetInnerHTML={{ __html: projectUnit.first_description }} />
+                    </div>
+
+                    {/* Image Gallery Section */}
+                    {projectUnit.images && projectUnit.images.length > 0 && (
+                        <div className="gallery-section">
+                            <div className="section-header">
+                                <h2 className="section-title">Project Gallery</h2>
+                                <div className="section-divider"></div>
+                            </div>
+                            
+                            {/* Main Gallery Carousel */}
+                            <div className="main-gallery">
+                                <Swiper
+                                    modules={[Navigation, Pagination, Autoplay]}
+                                    spaceBetween={20}
+                                    slidesPerView={1}
+                                    navigation={false}
+                                    pagination={{ 
+                                        clickable: true,
+                                        dynamicBullets: true,
+                                        renderBullet: function (index, className) {
+                                            return '<span class="' + className + ' custom-bullet"></span>';
+                                        }
+                                    }}
+                                    autoplay={{ 
+                                        delay: 5000,
+                                        disableOnInteraction: false
+                                    }}
+                                    loop={true}
+                                    className="main-swiper"
+                                >
+                                    {projectUnit.images.map((image, index) => (
+                                        <SwiperSlide key={index} className="gallery-slide">
+                                            <div className="slide-image-container">
+                                                <img 
+                                                    src={`/assets/images/featured-project/${image.imgSrc}`} 
+                                                    className="slide-image" 
+                                                    alt={`${projectUnit.title} - Image ${index + 1}`} 
+                                                />
+                                                <div className="image-overlay">
+                                                    <span className="image-counter">{index + 1} / {projectUnit.images.length}</span>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            </div>
+
+                            {/* Thumbnail Gallery */}
+                            <div className="thumbnail-gallery">
+                                <div className="thumbnails-container">
+                                    {projectUnit.images.map((image, index) => (
+                                        <div key={index} className="thumbnail-item">
+                                            <img 
+                                                src={`/assets/images/featured-project/${image.imgSrc}`} 
+                                                className="thumbnail-image" 
+                                                alt={`Thumbnail ${index + 1}`} 
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     )}
-                </div>
-                <div className='col-12 w-100 h-auto m-0 p-3 mt-5'>
-                    <BlogLink />
+
+                    {/* Second Description */}
+                    <div className="description-section">
+                        <div className="section-header">
+                            <h2 className="section-title">Technical Details</h2>
+                            <div className="section-divider"></div>
+                        </div>
+                        <div className="description-content" dangerouslySetInnerHTML={{ __html: projectUnit.second_description }} />
+                    </div>
+
+                    {/* Project Specifications */}
+                    <div className="specifications-section">
+                        <div className="section-header">
+                            <h2 className="section-title">Project Specifications</h2>
+                            <div className="section-divider"></div>
+                        </div>
+                        <div className="specs-grid">
+                            <div className="spec-item">
+                                <div className="spec-icon">
+                                    <i className="fas fa-car"></i>
+                                </div>
+                                <div className="spec-content">
+                                    <h4>Vehicle Type</h4>
+                                    <p>{projectCategory.title}</p>
+                                </div>
+                            </div>
+                            <div className="spec-item">
+                                <div className="spec-icon">
+                                    <i className="fas fa-tools"></i>
+                                </div>
+                                <div className="spec-content">
+                                    <h4>Modification Level</h4>
+                                    <p>Custom Build</p>
+                                </div>
+                            </div>
+                            <div className="spec-item">
+                                <div className="spec-icon">
+                                    <i className="fas fa-calendar-alt"></i>
+                                </div>
+                                <div className="spec-content">
+                                    <h4>Project Status</h4>
+                                    <p>Completed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Related Content */}
+                    <div className="related-content-section">
+                        <div className="section-header">
+                            <h2 className="section-title">Related Content</h2>
+                            <div className="section-divider"></div>
+                        </div>
+                        <div className="blog-link-container">
+                            <BlogLink />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

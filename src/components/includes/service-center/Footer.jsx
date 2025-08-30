@@ -22,9 +22,9 @@ function Footer() {
               <li>
                 <strong className="text-white">QUICK LINKS</strong>
               </li>
-              <li><Link to="/services">SHOP</Link></li>
-              <li><Link to="/services">VIDEOS</Link></li>
-              <li><Link to="/services">AFFORDABLE MAGS AND TIRES</Link></li>
+              <li><Link to="/service-center/shop">SHOP</Link></li>
+              <li><Link to="/video">VIDEOS</Link></li>
+              <li><Link to="/service-center/shop">AFFORDABLE MAGS AND TIRES</Link></li>
             </ul>
           </div>
           <div className="footer-links footer-third-col col-lg-3 col-md-12 col-sm-12">
@@ -32,9 +32,9 @@ function Footer() {
               <li>
                 <strong className="text-white">LEARN</strong>
               </li>
-              <li><Link to="/services">ABOUT US</Link></li>
-              <li><Link to="/services">BLOGS</Link></li>
-              <li><Link to="/services">FAQ</Link></li>
+              <li><Link to="/service-center/about-us">ABOUT US</Link></li>
+              <li><Link to="/blog/news">BLOGS</Link></li>
+              <li><Link to="">FAQ</Link></li>
             </ul>
           </div>
           <div className="footer-links footer-fourth-col col-lg-3 col-md-12 col-sm-12">
@@ -42,9 +42,9 @@ function Footer() {
               <li>
                 <strong className="text-white">SUPPORT</strong>
               </li>
-              <li><Link to="/services">SERVICES</Link></li>
-              <li><Link to="/services">MERCH</Link></li>
-              <li><Link to="/services">SERVICE CENTER</Link></li>
+              <li><Link to="/service-center/after-care">SERVICES</Link></li>
+              <li><Link to="/merch">MERCH</Link></li>
+              <li><Link to="/service-center">SERVICE CENTER</Link></li>
             </ul>
           </div>
         </div>

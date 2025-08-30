@@ -1,16 +1,57 @@
+/* About Us Section - Enhanced Design */
 .aboutus_home_section {
     background: url('./../images/content/about-us-bg.jpg') no-repeat center;
     background-position: center;
     background-size: auto 100%;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.aboutus_home_section {
+.aboutus_home_section .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.aboutus_home_section .hero-content {
+    text-align: center;
+    color: #ffffff;
+    z-index: 20;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.aboutus_home_section .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+}
+
+.aboutus_home_section .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
     margin: 0;
-    padding:20px 0 50px 0;
-    width:100%;
-    height:auto;
-    min-height: 80vh;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .aboutus_content_section {
@@ -19,13 +60,243 @@
     background-size: auto 100%;
     background-attachment: fixed;
     padding: 1vh 2vh 2vh 2vh;
+    color: #ffffff;
 }
 
-@media only screen and (min-width:1000px) {
+/* Main Content Styling */
+.about-main-content {
+    margin-bottom: 4rem;
+}
+
+.about-main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-text-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.about-paragraph strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Gallery Section */
+.about-gallery {
+    margin: 4rem 0;
+}
+
+.gallery-item {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.image-caption {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.image-caption i {
+    font-style: italic;
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Expansion Section */
+.expansion-section {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.expansion-content {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.expansion-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.expansion-text {
+    flex: 1;
+}
+
+.expansion-text .about-paragraph {
+    margin-bottom: 1.5rem;
+}
+
+.about-tagline {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.tagline-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.expansion-image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.expansion-image img {
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expansion-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media only screen and (min-width: 1000px) {
     .aboutus_home_section {
         background-size: cover;
     }
+    
     .aboutus_content_section {
         padding: 10vh 20vh 20vh 20vh;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutus_home_section {
+        min-height: 60vh;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .about-main-title {
+        font-size: 2.5rem;
+    }
+    
+    .expansion-title {
+        font-size: 2rem;
+    }
+    
+    .about-paragraph {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .gallery-item {
+        margin-bottom: 2rem;
+    }
+    
+    .expansion-content {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutus_home_section {
+        min-height: 50vh;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .about-main-title {
+        font-size: 2rem;
+    }
+    
+    .expansion-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-paragraph {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+    
+    .expansion-content {
+        padding: 1rem;
+    }
+    
+    .about-tagline {
+        padding: 1rem;
+    }
+    
+    .tagline-text {
+        font-size: 1rem;
     }
 }
