@@ -88,7 +88,7 @@ function Index() {
                 {servicesData.map((service) => (
                   <Link 
                     key={service.id} 
-                    to={service.link} 
+                    to="/service-center/after-care" 
                     className='service-circle-btn'
                   >
                     <div className='service-icon'>

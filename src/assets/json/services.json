@@ -5,7 +5,7 @@
     "title": "Preventive Maintenance Service",
     "subtitle": "FREE 22 POINT INSPECTION",
     "description": "To maintain peak performance and vehicle longevity, it's recommended to have this service every 6000 kilometers or every 3 months, whichever comes first. Our comprehensive inspection covers all critical systems including engine, transmission, brakes, and safety components.",
-    "price": "P1799.00",
+    "price": 1799,
     "link": "/service-center/preventive-maintenance"
   },
   {
@@ -14,7 +14,7 @@
     "title": "Car Care",
     "subtitle": "DETAILED CLEANING & PROTECTION",
     "description": "Professional interior and exterior detailing service that goes beyond basic washing. Includes paint protection, interior sanitization, leather conditioning, and ceramic coating options for long-lasting shine and protection.",
-    "price": "P899.00",
+    "price": 899,
     "link": "/service-center/car-care"
   },
   {
@@ -23,7 +23,7 @@
     "title": "Wheel Alignment & Balancing",
     "subtitle": "PRECISION ALIGNMENT SERVICE",
     "description": "Advanced wheel alignment and balancing using state-of-the-art equipment to ensure optimal tire wear, improved fuel efficiency, and enhanced vehicle handling. Includes computerized alignment check and road test verification.",
-    "price": "P599.00",
+    "price": 599,
     "link": "/service-center/wheel-alignment"
   },
   {
@@ -32,7 +32,7 @@
     "title": "Brake System Check & Repair",
     "subtitle": "SAFETY INSPECTION & REPAIR",
     "description": "Comprehensive brake system evaluation including brake pads, rotors, calipers, and hydraulic components. Professional repair and replacement services to ensure your vehicle's stopping power meets safety standards.",
-    "price": "P1299.00",
+    "price": 1299,
     "link": "/service-center/brake-system"
   },
   {
@@ -41,7 +41,7 @@
     "title": "Window Tinting",
     "subtitle": "PROFESSIONAL TINT INSTALLATION",
     "description": "High-quality window tinting services using premium materials that provide UV protection, heat reduction, and enhanced privacy. Available in various shades and includes warranty coverage for professional installation.",
-    "price": "P799.00",
+    "price": 799,
     "link": "/service-center/tint"
   },
   {
@@ -50,7 +50,7 @@
     "title": "Underchassis & Suspension Repair",
     "subtitle": "COMPREHENSIVE SUSPENSION SERVICE",
     "description": "Expert diagnosis and repair of suspension components including shocks, struts, bushings, and steering systems. Restore your vehicle's ride quality and handling with our professional suspension services.",
-    "price": "P1499.00",
+    "price": 1499,
     "link": "/service-center/underchassis"
   },
   {
@@ -59,7 +59,7 @@
     "title": "Tire & Wheelset Packages",
     "subtitle": "PREMIUM TIRE SOLUTIONS",
     "description": "Complete tire and wheel packages including selection, mounting, balancing, and alignment. We offer premium brands and custom wheel options to enhance your vehicle's performance and appearance.",
-    "price": "P2499.00",
+    "price": 2499,
     "link": "/service-center/tire-wheels"
   }
 ]
