@@ -1,20 +1,34 @@
 import React, { useState } from 'react';
+import axiosInstance  from './../../../../axios';
+
 import './../../../../assets/css/service-center/contact-page.css';
 
 function ContactPage() {
   const [formData, setFormData] = useState({
+    method: 'schedule-appointment',
     firstName: '',
     lastName: '',
     mobileNumber: '',
-    email: '',
+    email_add: '',
     plateNumber: '',
     appointmentDate: '',
     preferredTime: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
-  const [submitStatus, setSubmitStatus] = useState(''); // 'success' or 'error'
+  const [message, setMessage] = useState({ type: '', text: '', show: false });
+
+  const showMessage = (type, text) => {
+    setMessage({ type, text, show: true });
+    // Auto-hide message after 15 seconds
+    setTimeout(() => {
+      setMessage({ type: '', text: '', show: false });
+    }, 15000);
+  };
+
+  const hideMessage = () => {
+    setMessage({ type: '', text: '', show: false });
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -28,35 +42,32 @@ function ContactPage() {
     e.preventDefault(); // prevent page reload
     console.log('Form submission started with data:', formData);
     setIsSubmitting(true);
-    setSubmitMessage('');
-    setSubmitStatus('');
+    setMessage({ type: '', text: '', show: false });
+
+    const payload = {
+      method: 'schedule-appointment',
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      mobileNumber: formData.mobileNumber,
+      email_add: formData.email_add,
+      plateNumber: formData.plateNumber,
+      appointmentDate: formData.appointmentDate,
+      preferredTime: formData.preferredTime
+    }
 
     try {
-      console.log('Sending request to PHP endpoint...');
-      const response = await fetch('http://localhost/aikee/autobot/autobot-emailer/send-appointment-email.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json', // tell PHP we send JSON
-        },
-        body: JSON.stringify(formData),
+      let res = await axiosInstance.post('schedule-appointment', payload, {
+        headers: { "Content-Type": "application/json" },
       });
+      let status_code = res.data.status_code;
+      let title = res.data.status;
+      let message = res.data.message;
 
-      console.log('Response received:', response);
-      console.log('Response status:', response.status);
-      console.log('Response headers:', response.headers);
-
-      // Check if response is ok before trying to parse JSON
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const result = await response.json();
-      console.log('Response JSON:', result);
-
-      if (result.success) {
-        setSubmitStatus('success');
-        setSubmitMessage(result.message || 'Your appointment request has been sent successfully!');
-        console.log('Email sent successfully!');
+      if (status_code == 200) {
+        // Success - Show success message and reset form
+        showMessage('success', message || "Your appointment has been scheduled successfully!");
+        
+        // Reset form
         setFormData({
           firstName: '',
           lastName: '',
@@ -66,37 +77,49 @@ function ContactPage() {
           appointmentDate: '',
           preferredTime: ''
         });
+        
+      } else if (status_code == 422) {
+        // Validation error - Show error message without resetting form
+        showMessage('error', message || "Please check the form and make sure all the information is valid.");
+        return false;
       } else {
-        setSubmitStatus('error');
-        setSubmitMessage(result.message || 'Failed to send appointment request.');
-        console.error('Email sending failed:', result.message);
+        // Other errors - Show error message without resetting form
+        showMessage('error', message || "An error occurred. Please try again.");
+        return false;
       }
-    } catch (error) {
-      console.error('Network or parsing error:', error);
-      setSubmitStatus('error');
-      setSubmitMessage('Network error. Please check your connection and try again. Error: ' + error.message);
+    } catch (err) {
+      // Network or other errors - Show error message without resetting form
+      let errorMessage = "An error occurred. Please try again.";
+      if (err.response && err.response.data && err.response.data.errors) {
+        errorMessage = "Please check the form and make sure all the information is valid.";
+      }
+      
+      showMessage('error', errorMessage);
+      return false;
     } finally {
+      // Always reset loading state
       setIsSubmitting(false);
-      console.log('Form submission completed');
     }
   };
 
-
   return (
     <div className="contact-page-container">
+      {/* Custom Message Display */}
+      {message.show && (
+        <div className={`custom-message ${message.type}`}>
+          <div className="message-content">
+            <span className="message-text">{message.text}</span>
+            <button className="message-close" onClick={hideMessage}>×</button>
+          </div>
+        </div>
+      )}
+
       <div className="container-fluid">
         <div className="row">
           {/* Contact Form Section - Full Width */}
           <div className="col-12">
             <div className="contact-form-section">
               <h2 className="form-title">Please fill-in the following details to complete your appointment:</h2>
-              
-              {/* Submit Message Display */}
-              {submitMessage && (
-                <div className={`alert ${submitStatus === 'success' ? 'alert-success' : 'alert-danger'} mt-3`} role="alert">
-                  {submitMessage}
-                </div>
-              )}
               
               <form onSubmit={handleSubmit} className="appointment-form">
                 {/* Personal Details */}
@@ -158,9 +181,9 @@ function ContactPage() {
                         <input
                           type="email"
                           className="form-control"
-                          id="email"
-                          name="email"
-                          value={formData.email}
+                          id="email_add"
+                          name="email_add"
+                          value={formData.email_add}
                           onChange={handleInputChange}
                           required
                           disabled={isSubmitting}
@@ -232,7 +255,14 @@ function ContactPage() {
                     className="btn btn-primary submit-btn"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? 'Sending...' : 'Schedule Appointment'}
+                    {isSubmitting ? (
+                      <>
+                        <span className="loading-spinner"></span>
+                        <span>Sending...</span>
+                      </>
+                    ) : (
+                      'Schedule Appointment'
+                    )}
                   </button>
                 </div>
               </form>
