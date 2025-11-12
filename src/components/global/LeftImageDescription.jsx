@@ -5,7 +5,7 @@ function LeftImageDescription({ rowClassName, DescBoxClass, BoxTittle, BoxDescri
   return (
     <div className={`row p-0 ${rowClassName}`}>
         <div className={`image_desc_div col-lg-10 col-md-12 col-sm-12 m-0 ${DescBoxClass}`}>
-            <h1>{ BoxTittle }</h1>
+            <h3>{ BoxTittle }</h3>
             <p>{ BoxDescription }</p>
             <Link to={RouterLink} className="black_btn">{BtnTittle}</Link>
         </div>

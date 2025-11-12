@@ -12,9 +12,9 @@ import ShoppingListModification from './../../../global/ShoppingListModification
 import ShoppingListMaintenance from './../../../global/ShoppingListMaintenance'
 
 import AutobotBG from './../../../../assets/images/ico/autobot-bg.png'
-import FirstBlog from './../../../../assets/images/content/march-madness.jpg'
-import SecondBlog from './../../../../assets/images/content/blog-1.jpg'
-import ThirdBlog from './../../../../assets/images/content/blog-2.jpg'
+import FirstBlog from './../../../../assets/images/content/MAS-25-Teaser-2.jpg'
+import SecondBlog from './../../../../assets/images/content/Timeline-Cover-1.png'
+import ThirdBlog from './../../../../assets/images/content/Luminox-Teaser-4-1.png'
 import PhilMap from './../../../../assets/images/content/map.png'
 
 import ServiceOne from './../../../../assets/images/content/services-1.jpg'
@@ -26,9 +26,9 @@ import ServiceSix from './../../../../assets/images/content/services-6.jpg'
 import ServiceSeven from './../../../../assets/images/content/services-7.jpg'
 import ServiceEight from './../../../../assets/images/content/services-8.jpg'
 
-import MerchOne from './../../../../assets/images/merch/merch-1.jpg'
-import MerchTwo from './../../../../assets/images/merch/merch-2.jpg'
-import MerchThree from './../../../../assets/images/merch/merch-3.jpg'
+import MerchOne from './../../../../assets/images/merch/Camping-Gear-7-1.png'
+import MerchTwo from './../../../../assets/images/merch/DSC09145-1.png'
+import MerchThree from './../../../../assets/images/merch/Rectangle-36.png'
 
 // Import products data
 import productsData from './../../../../assets/json/products.json'
@@ -37,42 +37,42 @@ const servicesData = [
   {
     imageSrc: ServiceOne,
     RouterLink: "/service-center/after-care",
-    BtnTittle: "Off-road Vehicle Customization"
-  },
-  {
-    imageSrc: ServiceTwo,
-    RouterLink: "/service-center/after-care",
-    BtnTittle: "Vehicle Maintenance and Repairs"
-  },
-  {
-    imageSrc: ServiceThree,
-    RouterLink: "/service-center/after-care",
-    BtnTittle: "Suspension Upgrades"
-  },
-  {
-    imageSrc: ServiceFour,
-    RouterLink: "/service-center/after-care",
-    BtnTittle: "Fabrication Services"
-  },
-  {
-    imageSrc: ServiceFive,
-    RouterLink: "/service-center/after-care",
-    BtnTittle: "Tire and Wheels"
-  },
-  {
-    imageSrc: ServiceSix,
-    RouterLink: "/service-center/after-care",
-    BtnTittle: "4x4 Parts and Accesories"
+    BtnTittle: "Custom Builds & Fabrication"
   },
   {
     imageSrc: ServiceSeven,
     RouterLink: "/service-center/after-care",
-    BtnTittle: "Performance Upgrades"
+    BtnTittle: "Performance & Upgrades"
   },
+  {
+    imageSrc: ServiceThree,
+    RouterLink: "/service-center/after-care",
+    BtnTittle: "Suspension, Wheels & Tires"
+  },
+  // {
+  //   imageSrc: ServiceFour,
+  //   RouterLink: "/service-center/after-care",
+  //   BtnTittle: "Fabrication Services"
+  // },
+  // {
+  //   imageSrc: ServiceFive,
+  //   RouterLink: "/service-center/after-care",
+  //   BtnTittle: "Tire and Wheels"
+  // },
+  // {
+  //   imageSrc: ServiceSix,
+  //   RouterLink: "/service-center/after-care",
+  //   BtnTittle: "4x4 Parts and Accesories"
+  // },
+  // {
+  //   imageSrc: ServiceSeven,
+  //   RouterLink: "/service-center/after-care",
+  //   BtnTittle: "Performance Upgrades"
+  // },
   {
     imageSrc: ServiceEight,
     RouterLink: "/service-center/after-care",
-    BtnTittle: "Vehicle Inspection"
+    BtnTittle: "Maintenance, Repairs & Inspections"
   },
 ];
 
@@ -143,8 +143,8 @@ function index() {
             <div className="blog-overlay">
               <LeftImageDescription 
                   DescBoxClass="transparent_black" 
-                  BoxTittle="MARCH MADNESS SALE"
-                  BoxDescription="This March, Autobot Offroad is bringing the ultimate upgrade season with insane deals on off-road essentials, accessories, and performance mods! Whether you're looking for a full build, suspension upgrades, or lighting enhancements, now's the time to level up your rig without breaking the bank."
+                  BoxTittle="Autobot Offroad Is About to Go Wild at Manila Auto Salon 2025"
+                  BoxDescription="Autobot Offroad’s pulling up to Manila Auto Salon 2025 — and trust, this ain’t your usual car show flex. We’re talking next-level rigs, built different, and ready to break necks. This year, we’re ditching the “same old” and dropping fresh, mind-blowing builds that’ll make you question what’s even possible on four wheels. The Autobot crew’s been grinding nonstop — late nights, busted knuckles, and pure passion — all to cook up something insane for y’all. So yeah… get ready. We’re not just showing rigs — we’re dropping jaws. See you at SMX, fam."
                   RouterLink="/about-us"
                   BtnTittle="More"
               />
@@ -152,13 +152,13 @@ function index() {
           </div>
           <div className='col-lg-6 col-md-6 col-sm-12 p-0'>
             <div className="row p-0 m-0">
-              <div className='col-12 p-0 m-0 blog-right-box'>
+              <div className='col-12 p-0 m-0 blog-right-box bg-primary'>
                   <img src={SecondBlog} className="" alt="March Madness" />
                   <div className="blog-overlay-2">
                     <RightImageDescription 
                           DescBoxClass="transparent_black" 
-                          BoxTittle="TOYOTA x AUTOBOT"
-                          BoxDescription="Autobot Offroad is proud to collaborate with Toyota in bringing back an iconic legend—the Toyota Tamaraw. Blending heritage with innovation, this build is engineered for modern utility, durability, and adventure."
+                          BoxTittle="Autobot Jamboree 2025 x BFGoodrich: Where the Trail Gets Real"
+                          BoxDescription="Autobot Offroad is back with Jamboree 2025, teaming up with BFGoodrich for the wildest ride yet. Expect new activities, tougher challenges, and big surprises that’ll push every rig — and every driver — to the limit."
                           RouterLink="/about-us"
                           BtnTittle="More"
                       />
@@ -169,8 +169,8 @@ function index() {
                   <div className="blog-overlay-2">
                     <RightImageDescription 
                           DescBoxClass="transparent_black" 
-                          BoxTittle="MARLBORO x AUTOBOT"
-                          BoxDescription="Marlboro teams up with Autobot Offroad to transform three Ford Raptor Next-Gens into Marlboro Red beasts, built for adventure. With custom wheels, rugged tires, and premium off-road upgrades, these one-of-a-kind Raptors are up for grabs in an exclusive Marlboro raffle!"
+                          BoxTittle="Luminox x Autobot Offroad"
+                          BoxDescription="From October 24–26, Greenhills came alive as Autobot Offroad and Luminox unveiled their collab watch a fusion of rugged style and precision performance. Celebrities and influencers like Ion Perez, Jak Roberto, Klea Pineda, and more joined the celebration, making it a weekend of grit, style, and adventure"
                           RouterLink="/about-us"
                           BtnTittle="More"
                       />
@@ -223,7 +223,7 @@ function index() {
                     <div className='merch-box-col col-lg-6 col-md-12 col-sm-12 p-0 m-0'>
                         <img src={MerchOne} alt="Merch" className="merch_img rounded-lg m-0 object-cover zoom-in" />
                         <div className='merch-overlay '>
-                            <Link to="/services" className="merch_btn">LINEAR COLLECTION</Link>
+                            <Link to="/services" className="merch_btn">BASECAMP COLLECTION</Link>
                         </div>
                     </div>
                     <div className='col-lg-6 col-md-12 col-sm-12 p-0 m-0'>
@@ -231,13 +231,13 @@ function index() {
                         <div className='merch-box-col col-12 m-0 p-0'>
                             <img src={MerchTwo} alt="Merch" className="merch_img rounded-lg m-0 object-cover zoom-in" />
                               <div className='merch-overlay '>
-                                <Link to="/services" className="merch_btn">SUNSET DRIFT COLLECTION</Link>
+                                <Link to="/services" className="merch_btn">ROAM FREE VOL II</Link>
                             </div>
                         </div>
                         <div className='merch-box-col col-12 m-0 p-0'>
                             <img src={MerchThree} alt="Merch" className="merch_img rounded-lg m-0 object-cover zoom-in" />
                               <div className='merch-overlay '>
-                                  <Link to="/services" className="merch_btn">MONO COLLECTION</Link>
+                                  <Link to="/services" className="merch_btn">FAIRWAY & FOUR WHEEL</Link>
                               </div>
                         </div>
                       </div>
@@ -247,7 +247,7 @@ function index() {
           </div>
         </div>
       </div>
-      <SectionTitle tittle="POWERED BY"/>
+      <SectionTitle tittle="BRANCH"/>
       <div className="container-fluid powered_by_section" >
         <div className="powered-by-content">
           <div className="powered-by-header">
