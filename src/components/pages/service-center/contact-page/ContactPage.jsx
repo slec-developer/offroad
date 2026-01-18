@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axiosInstance  from './../../../../axios';
+import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
 
 import './../../../../assets/css/service-center/contact-page.css';
 
@@ -116,7 +117,7 @@ function ContactPage() {
 
       <div className="container-fluid">
         <div className="row">
-          {/* Contact Form Section - Full Width */}
+          {/* Contact Form Section */}
           <div className="col-12">
             <div className="contact-form-section">
               <h2 className="form-title">Please fill-in the following details to complete your appointment:</h2>
@@ -265,11 +266,47 @@ function ContactPage() {
                     )}
                   </button>
                 </div>
+
+                {/* Social Media Links Section */}
+                <div className="form-social-section">
+                  <h3 className="social-title">Follow Us</h3>
+                  <div className="social-links">
+                    <a 
+                      href="https://www.facebook.com/AutobotOffroadPH/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="social-link facebook"
+                      aria-label="Visit our Facebook page"
+                    >
+                      <FaFacebook className="social-icon" />
+                    </a>
+                    <a 
+                      href="https://www.instagram.com/autobotoffroadph/?hl=en" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="social-link instagram"
+                      aria-label="Visit our Instagram page"
+                    >
+                      <FaInstagram className="social-icon" />
+                    </a>
+                    <a 
+                      href="https://www.tiktok.com/@autobotoffroad" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="social-link tiktok"
+                      aria-label="Visit our TikTok page"
+                    >
+                      <FaTiktok className="social-icon" />
+                    </a>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
+        </div>
 
-          {/* Map Section - Below Form */}
+        {/* Map Section - Below Form */}
+        <div className="row">
           <div className="col-12">
             <div className="map-section">
               <h2 className="map-title">Where are we located?</h2>
