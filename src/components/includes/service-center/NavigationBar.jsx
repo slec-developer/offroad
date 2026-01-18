@@ -93,7 +93,6 @@ function NavigationBar() {
             {servicesDropdownOpen && (
               <div className="dropdown-menu">
                 <Link to="/services" onClick={closeNavBar}>Service</Link>
-                <Link to="/service-center" onClick={closeNavBar}>Service Center</Link>
                 <Link to="after-care" onClick={closeNavBar}>After Care</Link>
               </div>
             )}
@@ -134,7 +133,8 @@ function NavigationBar() {
             {shopDropdownOpen && (
               <div className="dropdown-menu">
                 <Link to="shop" onClick={closeNavBar}>Shop</Link>
-                <Link to="/merch" onClick={closeNavBar}>Merchant</Link>
+                <Link to="/service-center" onClick={closeNavBar}>Service Center</Link>
+                <Link to="/merch" onClick={closeNavBar}>Signatures</Link>
               </div>
             )}
           </div>
